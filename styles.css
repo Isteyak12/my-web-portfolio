@@ -28,6 +28,7 @@ body, html {
     height: 100%;
     box-sizing: border-box;
     scrollbar-width: thin;
+    scrollbar-color: #1e90ff rgba(192, 192, 192, 0.1);
 }
 
 /* Polymorphism-styled transparent boxes with gray and blue borders */
@@ -48,6 +49,8 @@ header {
 h1 {
     margin: 0 0 20px;
     font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -56,6 +59,8 @@ h2 {
     color: #1e90ff;
     padding-bottom: 5px;
     border-bottom: 2px solid #1e90ff;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
@@ -69,6 +74,7 @@ section h2 {
     margin: 0 0 10px;
     padding-left: 0;
     text-indent: 0;
+    line-height: 1.6;
 }
 
 .education-section .degree {
@@ -88,6 +94,7 @@ section h2 {
 /* Specific styles for Professional Experience Section */
 .professional-experience-section p {
     margin: 0 0 10px;
+    line-height: 1.6;
 }
 
 .professional-experience-section .job-title {
@@ -127,33 +134,39 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Modern scrollbar */
+/* Modern scrollbar with grey and blue theme */
 .content::-webkit-scrollbar {
     width: 12px;
 }
 
 .content::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(192, 192, 192, 0.1); /* Light grey background */
     border-radius: 10px;
 }
 
 .content::-webkit-scrollbar-thumb {
-    background-color: #1e90ff;
+    background-color: #1e90ff; /* Blue thumb */
     border-radius: 10px;
-    border: 3px solid transparent;
-    background-clip: content-box;
+    border: 3px solid rgba(192, 192, 192, 0.1); /* Light grey border */
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #104e8b; /* Darker blue on hover */
 }
 
 /* List styling for consistent formatting */
 ul li {
     margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-.projects-section .project {
+.projects-section .project,
+.additional-projects-section .project {
     margin-bottom: 20px;
 }
 
-.projects-section .project-title {
+.projects-section .project-title,
+.additional-projects-section .project-title {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;

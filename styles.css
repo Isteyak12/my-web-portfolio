@@ -16,16 +16,54 @@ body, html {
     z-index: 1;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 144, 255, 0.9);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 .content {
     position: relative;
     z-index: 2;
     padding: 20px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 70px auto 0 auto; /* Adjusted margin to account for navbar */
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     overflow-y: auto;
-    height: 100%;
+    height: calc(100% - 70px); /* Adjusted height to account for navbar */
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #1e90ff rgba(192, 192, 192, 0.1);

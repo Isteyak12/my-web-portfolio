@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: white;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+}
+
+/* Polymorphism-styled transparent boxes with gray and blue borders */
+section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.3); /* Gray border */
+    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3); /* Blue shadow */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin: 0 0 15px;
+    font-size: 1.8em;
+    color: #1e90ff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #1e90ff;
+}
+
+section h2 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1e90ff;
+}
+
+/* Specific styles for Education Section */
+.education-section p {
+    margin: 0 0 10px;
+    padding-left: 0;
+    text-indent: 0;
+}
+
+.education-section .degree {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.education-section .institution {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.education-section .details {
+    font-style: italic;
+}
+
+/* Specific styles for Professional Experience Section */
+.professional-experience-section p {
+    margin: 0 0 10px;
+}
+
+.professional-experience-section .job-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline;
+}
+
+.professional-experience-section .company {
+    font-size: 1.1em;
+    margin-left: 10px;
+    display: inline;
+}
+
+.professional-experience-section .location {
+    font-style: italic;
+    display: inline;
+}
+
+.professional-experience-section .date {
+    font-style: italic;
+    display: inline;
+    margin-left: 10px;
+}
+
+.professional-experience-section .details {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Modern scrollbar */
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #1e90ff;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+/* List styling for consistent formatting */
+ul li {
+    margin-bottom: 10px;
+}
+
+.projects-section .project {
+    margin-bottom: 20px;
+}
+
+.projects-section .project-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}

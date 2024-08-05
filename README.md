@@ -1,4 +1,4 @@
-For a web portfolio project, a comprehensive README file is essential. It serves as the primary document to understand your project, its purpose, and how to use or contribute to it. Here’s a detailed example of what your README file can include:
+![image](https://github.com/user-attachments/assets/c17e0199-1537-40f5-aea9-9bdc6020191e)
 
 ---
 

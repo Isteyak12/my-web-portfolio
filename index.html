@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isteyak's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Favicon using base64 encoded image -->
+    <link rel="icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEUAAABPRkT////8/Pzm5ubo6OjQ0NCDg4P39/fu7u6hoaF6enqAgIAzMzPe3t7b29vDw8OFhYVG2Uh8AAAAFHRSTlMAEBAgIDBAUGCAkLCw0OEBQUVBXOMKM4AAACVUlEQVRIDbXBhW+CUBgH8OcNRiIR1pVSyO7//4+xCR0kY23Kt5jBGDneE73TNLmi9Q3/kWJ8p0GpG73a2jXXqHnrvOp+yWqZVmoxhD1Sb96jPf4jEfD4LVkCknsNuhmbm4dNfKBAPyo9HZ6S6FlGHXa5G4/fArv18moS4t23Jvzm/3TfA43DPi6C5gJlJ2evsOiDNFErpHRt/6GgM4IUw2DXGnZjH5+pdNix5FGPzJw0JqqmuHi36f9chG0s9RqaLEMMYBltfaD2fjE8UIKXEC8GoBGs4gQrD6WSvPG5n8p6mD5OSjZKz8PYU4PoZ5p5uejGfb2EFowZtOLltb5QVVDbYUR2i1VqB+aEKJ3Zbc6xWokXPyjOYJ+pbI9ypS6GfH8E+3Qs/j6u/wvhnmnB84+Ijy2AAAAAElFTkSuQmCC">
 </head>
+
 <body>
     <div id="particles-js"></div>
     <nav class="navbar">
@@ -16,15 +21,27 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#leadership-experience">Leadership Experience</a></li>
             <li><a href="#additional-projects">Additional Projects</a></li>
+            <li><a href="#cards">Card Section</a></li>
         </ul>
     </nav>
     <div class="content">
         <header>
-            <h1>Isteyak</h1>
-            <p>isteyak@uwindsor.ca • (437) 849-5119 • Toronto, ON<br>
-            <a href="https://linkedin.com/isteyak-409578230" target="_blank">LinkedIn</a> • 
-            <a href="https://github.com/isteyak12" target="_blank">GitHub</a></p>
+            <div class="intro-section">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+                <h1>Isteyak</h1>
+                <p>isteyak@uwindsor.ca • (437) 849-5119 • Toronto, ON<br>
+                    <a href="https://linkedin.com/isteyak-409578230" target="_blank">LinkedIn</a> •
+                    <a href="https://github.com/isteyak12" target="_blank">GitHub</a>
+                </p>
+            </div>
         </header>
+        <section id="intro" class="intro-section">
+            <h2>Hi, I'm Isteyak!</h2>
+            <p>Welcome to my professional portfolio. I am a passionate software developer with a strong background in
+                computer science. I have experience in various programming languages, frameworks, and operating systems.
+                I am currently seeking new opportunities to leverage my skills and contribute to exciting projects. Feel
+                free to explore my work and reach out if you have any questions or opportunities!</p>
+        </section>
         <section id="skills" class="skills-section">
             <h2>Skills</h2>
             <ul>
@@ -44,18 +61,24 @@
         <section id="professional-experience" class="professional-experience-section">
             <h2>Professional Experience</h2>
             <div class="job">
-                <p><span class="job-title">AI Club Web Admin</span> | <span class="company">University of Windsor</span> | <span class="location">Windsor, ON</span> | <span class="date">October 2023 - Present</span></p>
+                <p><span class="job-title">AI Club Web Admin</span> | <span class="company">University of Windsor</span>
+                    | <span class="location">Windsor, ON</span> | <span class="date">October 2023 - Present</span></p>
                 <ul>
-                    <li>Launched and manage the AI Club's official Instagram account, driving higher engagement and visibility.</li>
-                    <li>Curate and schedule regular content such as event announcements, highlights, and educational posts to maintain consistent and engaging communication.</li>
+                    <li>Launched and manage the AI Club's official Instagram account, driving higher engagement and
+                        visibility.</li>
+                    <li>Curate and schedule regular content such as event announcements, highlights, and educational
+                        posts to maintain consistent and engaging communication.</li>
                 </ul>
             </div>
             <div class="job">
-                <p><span class="job-title">Teaching Assistant</span> | <span class="company">University of Windsor</span> | <span class="location">Windsor, ON</span> | <span class="date">August 2023 - August 2024</span></p>
+                <p><span class="job-title">Teaching Assistant</span> | <span class="company">University of
+                        Windsor</span> | <span class="location">Windsor, ON</span> | <span class="date">August 2023 -
+                        August 2024</span></p>
                 <ul>
                     <li>Mentoring more than 100+ student clients in Java OOP-based Data Structures.</li>
                     <li>Guided student clients with understanding of codes correlating to its algorithm.</li>
-                    <li>Updated, reported, and documented 100+ assignments within a tight schedule and provided feedback to every individual student within 1 day.</li>
+                    <li>Updated, reported, and documented 100+ assignments within a tight schedule and provided feedback
+                        to every individual student within 1 day.</li>
                 </ul>
             </div>
         </section>
@@ -69,27 +92,35 @@
                 </ul>
             </div>
             <div class="project">
-                <span class="project-title">Web-Based PDF and Email Automation System for Veygo Insurance | Freelance Project | April 2024</span>
+                <span class="project-title">Web-Based PDF and Email Automation System for Veygo Insurance | Freelance
+                    Project | April 2024</span>
                 <ul>
-                    <li>Engineered a versatile web application consisting of 4 interactive pages, significantly improving user experience and site navigation.</li>
-                    <li>Implemented a secure login system using Gmail integration, ensuring restricted access to an admin-only page.</li>
+                    <li>Engineered a versatile web application consisting of 4 interactive pages, significantly
+                        improving user experience and site navigation.</li>
+                    <li>Implemented a secure login system using Gmail integration, ensuring restricted access to an
+                        admin-only page.</li>
                 </ul>
             </div>
             <div class="project">
                 <span class="project-title">Automated Netflix Redirection | Personal Project | March 2024</span>
                 <ul>
-                    <li>Created a Python-based machine learning system utilizing OpenCV, dlib, TensorFlow, and Keras to detect 3 faces in a video feed in real-time continuously for 5 seconds and deployed an automatic redirection to Netflix.</li>
+                    <li>Created a Python-based machine learning system utilizing OpenCV, dlib, TensorFlow, and Keras to
+                        detect 3 faces in a video feed in real-time continuously for 5 seconds and deployed an automatic
+                        redirection to Netflix.</li>
                 </ul>
             </div>
             <div class="project">
-                <span class="project-title">Global Electricity Resources Availability Web App | WinHacks 2024 Hackathon | February 2024</span>
+                <span class="project-title">Global Electricity Resources Availability Web App | WinHacks 2024 Hackathon
+                    | February 2024</span>
                 <ul>
                     <li>Assisted in integrating React with Geocodify and Electricity Map APIs for real-time data.</li>
-                    <li>Worked in a team of 4 to create electrical usage resource solutions for potential clients and placed 3rd in competition.</li>
+                    <li>Worked in a team of 4 to create electrical usage resource solutions for potential clients and
+                        placed 3rd in competition.</li>
                 </ul>
             </div>
             <div class="project">
-                <span class="project-title">API based Water Quality Checker Web App | NASA SpaceApps 2023 Hackathon | September 2023</span>
+                <span class="project-title">API based Water Quality Checker Web App | NASA SpaceApps 2023 Hackathon |
+                    September 2023</span>
                 <ul>
                     <li>Cleaned a database and converted it to a JSON file.</li>
                     <li>Implemented a search bar option for user-friendly data retrieval.</li>
@@ -99,10 +130,14 @@
         <section id="leadership-experience" class="leadership-section">
             <h2>Leadership Experience</h2>
             <div class="job">
-                <p><span class="job-title">ACM Club Event Assistant</span> | <span class="company">Independent University, Bangladesh</span> | <span class="location">Dhaka</span> | <span class="date">March 2021 - August 2022</span></p>
+                <p><span class="job-title">ACM Club Event Assistant</span> | <span class="company">Independent
+                        University, Bangladesh</span> | <span class="location">Dhaka</span> | <span class="date">March
+                        2021 - August 2022</span></p>
                 <ul>
-                    <li>Assisted with organizing 10 events per annum related to computer science and technology with no less than 70% attendance per event.</li>
-                    <li>Collaborated with others as a team for event logistics, including venue selection, setup, and equipment arrangement, ensuring events were well-prepared and visually appealing.</li>
+                    <li>Assisted with organizing 10 events per annum related to computer science and technology with no
+                        less than 70% attendance per event.</li>
+                    <li>Collaborated with others as a team for event logistics, including venue selection, setup, and
+                        equipment arrangement, ensuring events were well-prepared and visually appealing.</li>
                 </ul>
             </div>
         </section>
@@ -111,18 +146,24 @@
             <div class="project">
                 <span class="project-title">Docker Containerization and CI/CD Workflow | August 2023 – Present</span>
                 <ul>
-                    <li>Orchestrated Docker containers for a Python web app, ensuring seamless deployment across various environments and platforms.</li>
-                    <li>Utilized Docker for isolating a Binary Search Tree implementation in Python, optimizing resource utilization.</li>
-                    <li>Implemented a robust CI/CD workflow using GitHub Actions, automating the build and deployment processes for both the web app and Binary Search Tree applications.</li>
+                    <li>Orchestrated Docker containers for a Python web app, ensuring seamless deployment across various
+                        environments and platforms.</li>
+                    <li>Utilized Docker for isolating a Binary Search Tree implementation in Python, optimizing resource
+                        utilization.</li>
+                    <li>Implemented a robust CI/CD workflow using GitHub Actions, automating the build and deployment
+                        processes for both the web app and Binary Search Tree applications.</li>
                 </ul>
             </div>
             <div class="project">
-                <span class="project-title">WinHacks 2024 – Environmental Web Application Project | February 2024 – Present</span>
+                <span class="project-title">WinHacks 2024 – Environmental Web Application Project | February 2024 –
+                    Present</span>
                 <ul>
                     <li>Designed the About Page, enhancing UX with interactive live backgrounds.</li>
                     <li>Assisted in integrating React with Geocodify and Electricity Map APIs for real-time data.</li>
-                    <li>Worked in a team of 4 to create electrical usage resource solutions for potential clients and placed 3rd in the competition.</li>
-                    <li>Automated machine-independent digital resume web page portfolio based on Streamlit technology.</li>
+                    <li>Worked in a team of 4 to create electrical usage resource solutions for potential clients and
+                        placed 3rd in the competition.</li>
+                    <li>Automated machine-independent digital resume web page portfolio based on Streamlit technology.
+                    </li>
                 </ul>
             </div>
             <div class="project">
@@ -130,14 +171,61 @@
                 <ul>
                     <li>Cleaned a database and converted it to a JSON file using Streamlit technology.</li>
                     <li>Implemented a search bar option for user-friendly data retrieval.</li>
-                    <li>Automated machine-independent digital resume web page portfolio based on Streamlit technology.</li>
+                    <li>Automated machine-independent digital resume web page portfolio based on Streamlit technology.
+                    </li>
                 </ul>
             </div>
         </section>
+        <section id="cards" class="cards-section">
+            <h2>Card Section</h2>
+            <div class="card-container">
+                <div class="flip-card glow-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                alt="Python Logo" style="width: 100px; height: auto;">
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="typing-text">This is a stack</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card glow-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                alt="Python Logo" style="width: 100px; height: auto;">
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="typing-text">This is a stack</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card glow-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                alt="Python Logo" style="width: 100px; height: auto;">
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="typing-text">This is a stack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="model" class="model-section">
+            <h2>3D Model</h2>
+            <div id="model-container"></div>
+        </section>
     </div>
-
     <!-- Particles.js library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
     <script src="script.js"></script>
+    <script src="model.js"></script>
 </body>
+
 </html>

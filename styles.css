@@ -1,4 +1,3 @@
-/* Existing CSS */
 body, html {
     margin: 0;
     padding: 0;
@@ -340,14 +339,18 @@ ul li {
 
 /* Styles for the 3D model container */
 .model-section {
+    background: #111;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
 #model-container {
     width: 100%;
-    height: 400px;
+    height: 500px;
     background-color: #000;
-    border-radius: 15px;
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
 }
+

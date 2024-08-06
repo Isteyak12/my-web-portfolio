@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isteyak's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Favicon using base64 encoded image -->
     <link rel="icon" href="favicon2.ico" type="image/x-icon">
-    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three/examples/jsm/"
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -21,7 +27,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#leadership-experience">Leadership Experience</a></li>
             <li><a href="#additional-projects">Additional Projects</a></li>
-            <li><a href="#cards">Card Section</a></li>
+            <!-- <li><a href="#cards">Card Section</a></li> -->
         </ul>
     </nav>
     <div class="content">
@@ -29,8 +35,9 @@
             <div class="intro-section">
                 <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
                 <h1>Isteyak</h1>
-                <p>isteyak@uwindsor.ca • (437) 849-5119 • Toronto, ON<br>
-                    <a href="https://linkedin.com/isteyak-409578230" target="_blank">LinkedIn</a> •
+                <p class="contact-info">
+                    <span><strong>isteyak@uwindsor.ca</strong></span> | <span><strong>(437) 849-5119</strong></span> | <span><strong>Toronto, ON</strong></span><br>
+                    <a href="https://linkedin.com/isteyak-409578230" target="_blank">LinkedIn</a> • 
                     <a href="https://github.com/isteyak12" target="_blank">GitHub</a>
                 </p>
             </div>
@@ -176,7 +183,7 @@
                 </ul>
             </div>
         </section>
-        <section id="cards" class="cards-section">
+        <!-- <section id="cards" class="cards-section">
             <h2>Card Section</h2>
             <div class="card-container">
                 <div class="flip-card glow-card">
@@ -213,19 +220,15 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section id="model" class="model-section">
-            <h2>3D Model</h2>
-            <div id="model-container"></div>
+            <!-- <h2>3D Model</h2> -->
+            <div id="model-container" style="width: 100%; height: 500px;"></div>
         </section>
     </div>
-    <!-- Particles.js library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Three.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
     <script src="script.js"></script>
-    <script src="model.js"></script>
+    <script type="module" src="model.js"></script>
 </body>
 
 </html>

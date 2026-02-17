@@ -4,9 +4,11 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
     background: #000;
     color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #particles-js {
@@ -21,11 +23,13 @@ body, html {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(to right, #1e90ff, #104e8b);
-    border-radius: 20px;
-    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.95), rgba(16, 78, 139, 0.95));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 12px 25px;
     z-index: 3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(30, 144, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: flex-start;
     max-width: 90%;
@@ -33,6 +37,8 @@ body, html {
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #1e90ff #333;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
 .navbar::-webkit-scrollbar {
@@ -64,40 +70,45 @@ body, html {
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    font-size: 1.1em;
+    padding: 8px 14px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
 }
 
 .navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 12px;
     margin: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-linkedin {
-    background-color: #0077b5;
+    background: linear-gradient(135deg, #0077b5, #005885);
     color: white;
 }
 
 .btn-github {
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #1a1a1a);
     color: white;
 }
 
 .btn:hover {
-    opacity: 0.8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.4);
 }
 
 .btn img {
@@ -110,25 +121,37 @@ body, html {
 .content {
     position: relative;
     z-index: 2;
-    padding: 20px;
-    max-width: 800px;
+    padding: 30px;
+    max-width: 900px;
     margin: 100px auto 0 auto;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
     overflow-y: auto;
     height: calc(100% - 100px);
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #1e90ff rgba(192, 192, 192, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 section {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(30, 144, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(30, 144, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(30, 144, 255, 0.3);
 }
 
 header {
@@ -137,12 +160,18 @@ header {
 }
 
 .profile-picture {
-    width: 150px;
+    width: 170px;
     height: auto;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border: 3px solid #1e90ff;
-    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+    border-radius: 25px;
+    margin-bottom: 25px;
+    border: 4px solid #1e90ff;
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.6), 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(30, 144, 255, 0.8), 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .intro-section {
@@ -152,63 +181,76 @@ header {
 
 h1 {
     margin: 0 0 20px;
-    font-size: 2.5em;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
 }
 
 h2 {
-    margin: 0 0 15px;
-    font-size: 1.8em;
+    margin: 0 0 20px;
+    font-size: 2em;
+    font-weight: 600;
     color: #1e90ff;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #1e90ff;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding-bottom: 12px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #1e90ff, transparent) 1;
+    letter-spacing: -0.3px;
+    text-shadow: 0 2px 10px rgba(30, 144, 255, 0.3);
 }
 
 section h2 {
-    margin: 0 0 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #1e90ff;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #1e90ff, transparent) 1;
 }
 
 .education-section p {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     padding-left: 0;
     text-indent: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .education-section .degree {
-    font-weight: bold;
-    font-size: 1.2em;
+    font-weight: 600;
+    font-size: 1.25em;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .education-section .institution {
     font-size: 1.1em;
     margin: 5px 0;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .education-section .details {
     font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .professional-experience-section p {
-    margin: 0 0 10px;
-    line-height: 1.6;
+    margin: 0 0 12px;
+    line-height: 1.7;
 }
 
 .professional-experience-section .job-title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.2em;
     display: inline;
+    color: #4da6ff;
 }
 
 .professional-experience-section .company {
     font-size: 1.1em;
     margin-left: 10px;
     display: inline;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .professional-experience-section .location {
@@ -237,39 +279,62 @@ a:hover {
 }
 
 .content::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 .content::-webkit-scrollbar-track {
-    background: rgba(192, 192, 192, 0.1);
+    background: rgba(192, 192, 192, 0.05);
     border-radius: 10px;
 }
 
 .content::-webkit-scrollbar-thumb {
-    background-color: #1e90ff;
+    background: linear-gradient(180deg, #1e90ff, #104e8b);
     border-radius: 10px;
-    border: 3px solid rgba(192, 192, 192, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .content::-webkit-scrollbar-thumb:hover {
-    background-color: #104e8b;
+    background: linear-gradient(180deg, #4da6ff, #1e90ff);
 }
 
 ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
+    margin-bottom: 12px;
+    line-height: 1.8;
+    padding-left: 8px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+ul li:hover {
+    padding-left: 12px;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .projects-section .project,
 .additional-projects-section .project {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border-left: 4px solid #1e90ff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-section .project:hover,
+.additional-projects-section .project:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(30, 144, 255, 0.2);
 }
 
 .projects-section .project-title,
 .additional-projects-section .project-title {
-    font-weight: bold;
+    font-weight: 600;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.15em;
+    color: #4da6ff;
+    letter-spacing: -0.2px;
 }
 
 .card-container {
@@ -387,3 +452,58 @@ ul li {
     margin: 0 auto;
 }
 
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info > div {
+    margin: 8px 0;
+    font-size: 1.05em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info a {
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #4da6ff !important;
+    text-decoration: none;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    .content {
+        padding: 20px;
+        max-width: 95%;
+    }
+    
+    .navbar {
+        max-width: 95%;
+    }
+}

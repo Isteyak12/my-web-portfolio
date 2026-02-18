@@ -595,4 +595,190 @@ section {
     .navbar {
         max-width: 95%;
     }
+
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
+
+/* ========== NEW MODERN STYLES ========== */
+
+/* Skills Section - Tag-based Layout */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(30, 144, 255, 0.3);
+}
+
+.skill-category-title {
+    font-size: 1.1em !important;
+    font-weight: 600;
+    color: #5db3ff;
+    margin: 0 0 12px 0 !important;
+    letter-spacing: 0.5px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(30, 144, 255, 0.15);
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+}
+
+.tag:hover {
+    background: rgba(30, 144, 255, 0.25);
+    border-color: rgba(30, 144, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
+
+.tag-highlight {
+    background: rgba(30, 144, 255, 0.25);
+    border-color: rgba(30, 144, 255, 0.5);
+    font-weight: 600;
+}
+
+/* Projects Section - Card Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #1e90ff, #4da6ff);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleY(1);
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(30, 144, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(30, 144, 255, 0.25);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+.project-card .project-title {
+    font-size: 1.25em !important;
+    font-weight: 700;
+    color: #5db3ff;
+    margin: 0 !important;
+    line-height: 1.3;
+}
+
+.project-date {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.project-description {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 16px !important;
+    font-size: 0.95em;
+}
+
+.project-description strong {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+}
+
+/* Tech Stack Tags */
+.project-tech-stack,
+.job-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(30, 144, 255, 0.1);
+    border: 1px solid rgba(30, 144, 255, 0.25);
+    border-radius: 6px;
+    font-size: 0.8em;
+    color: #5db3ff;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(30, 144, 255, 0.2);
+    border-color: rgba(30, 144, 255, 0.4);
+}
+
+/* Job Description Paragraph Style */
+.job-description {
+    color: rgba(255, 255, 255, 0.87);
+    line-height: 1.7;
+    margin-bottom: 8px !important;
+    font-size: 0.98em;
+}
+
+.job-description strong {
+    color: #5db3ff;
+    font-weight: 600;
+}
+
+/* Hide old project/job styles that used bullets */
+.projects-section .project,
+.additional-projects-section .project {
+    display: none;

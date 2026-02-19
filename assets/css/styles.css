@@ -117,6 +117,18 @@ a, button, .btn, .navbar a {
     color: white;
 }
 
+.btn-resume {
+    background: linear-gradient(135deg, #e53935, #b71c1c);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-resume svg {
+    flex-shrink: 0;
+}
+
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(30, 144, 255, 0.4);

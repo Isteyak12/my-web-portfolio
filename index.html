@@ -485,6 +485,36 @@
             <div id="model-container" style="width: 100%; height: 500px;"></div>
         </section>
     </div>
+
+    <!-- Tiny cat at the bottom -->
+    <div class="cat-container" id="cat">
+        <div class="meow-bubble" id="meow-bubble">Meow! 🐾</div>
+        <div class="cat-emoji">🐱</div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-toggle" id="chatbot-toggle" title="Chat with me!">💬</div>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <span>💬 Ask about Isteyak</span>
+            <button class="chatbot-close" id="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chat-msg bot">Hi! I'm Isteyak's portfolio bot. Ask me about his skills, projects, experience, or education!</div>
+        </div>
+        <div class="chatbot-suggestions" id="chatbot-suggestions">
+            <button class="suggestion-btn" data-q="What are your skills?">Skills</button>
+            <button class="suggestion-btn" data-q="Tell me about your projects">Projects</button>
+            <button class="suggestion-btn" data-q="What is your experience?">Experience</button>
+            <button class="suggestion-btn" data-q="What is your education?">Education</button>
+            <button class="suggestion-btn" data-q="How can I contact you?">Contact</button>
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off">
+            <button id="chatbot-send">➤</button>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script type="module" src="assets/js/model.js"></script>

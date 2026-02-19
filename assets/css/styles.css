@@ -460,37 +460,29 @@ p {
 }
 
 .professional-experience-section .job-meta {
-    font-size: 0.95em;
-    color: rgba(255, 255, 255, 0.75);
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
 }
 
-.professional-experience-section .company {
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+.job-chip {
+    display: inline-block;
+    padding: 5px 14px;
+    background: rgba(30, 144, 255, 0.1);
+    border: 1px solid rgba(30, 144, 255, 0.25);
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+    white-space: nowrap;
+    transition: all 0.2s ease;
 }
 
-.professional-experience-section .location {
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.professional-experience-section .date {
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.professional-experience-section .location {
-    font-style: italic;
-    display: inline;
-}
-
-.professional-experience-section .date {
-    font-style: italic;
-    display: inline;
-    margin-left: 10px;
+.job-chip:hover {
+    background: rgba(30, 144, 255, 0.2);
+    border-color: rgba(30, 144, 255, 0.4);
 }
 
 .professional-experience-section .details {

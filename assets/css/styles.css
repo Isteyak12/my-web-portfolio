@@ -266,11 +266,7 @@ h1 {
     font-size: 2.6em;
     font-weight: 700;
     letter-spacing: -1px;
-    background: linear-gradient(135deg, #ffffff, #4da6ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: none;
+    color: #ffffff;
     line-height: 1.2;
 }
 
@@ -723,6 +719,37 @@ section {
     animation: fadeIn 0.6s ease-out;
 }
 
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 6px;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 4;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animate hamburger into X when open */
+.navbar.open .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.navbar.open .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+.navbar.open .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Responsive Typography */
 @media (max-width: 768px) {
     h1 {
@@ -737,9 +764,43 @@ section {
         padding: 20px;
         max-width: 95%;
     }
-    
+
+    /* --- Mobile navbar --- */
     .navbar {
-        max-width: 95%;
+        max-width: auto;
+        left: auto;
+        right: 15px;
+        top: 10px;
+        transform: none;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 16px;
+        border-radius: 16px;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .navbar.open ul {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 1em;
+        padding: 10px 14px;
+        display: block;
+        text-align: left;
     }
 
     .projects-grid {

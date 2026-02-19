@@ -1,3 +1,10 @@
+// Close mobile nav when a link is tapped
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.navbar').classList.remove('open');
+    });
+});
+
 // Initialize particles.js
 particlesJS('particles-js', {
     "particles": {

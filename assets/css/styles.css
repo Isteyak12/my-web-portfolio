@@ -810,6 +810,31 @@ section {
     .projects-grid {
         grid-template-columns: 1fr !important;
     }
+
+    /* Experience & Leadership chips — stack vertically on mobile */
+    .professional-experience-section .job-meta,
+    .leadership-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .job-chip {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .professional-experience-section .job {
+        padding: 16px;
+    }
+
+    .leadership-card {
+        padding: 20px;
+    }
+
+    .leadership-achievements {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 10px;
+    }
 }
 
 /* ========== NEW MODERN STYLES ========== */

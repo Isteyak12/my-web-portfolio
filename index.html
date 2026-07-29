@@ -496,6 +496,28 @@
                 </div>
             </div>
         </section>
+        <section id="sky-hopper" class="sky-hopper-section">
+            <div class="arena-heading">
+                <div>
+                    <p class="arena-kicker">MINI ARCADE</p>
+                    <h2>Comet Drift</h2>
+                    <p>Steer a comet through an asteroid field, gather signal crystals, and survive the storm.</p>
+                </div>
+                <button type="button" class="arena-restart" id="sky-hopper-restart">New run</button>
+            </div>
+            <div class="sky-hopper-frame">
+                <canvas id="sky-hopper-canvas" width="720" height="360" aria-label="Comet Drift game. Use W and S or the arrow keys to steer your comet and collect crystals."></canvas>
+                <button type="button" class="sky-hopper-overlay" id="sky-hopper-overlay">Press a direction or tap to start</button>
+            </div>
+            <div class="arena-footer">
+                <p><kbd>W</kbd><kbd>S</kbd> or <kbd>↑</kbd><kbd>↓</kbd> steer · collect crystals, avoid asteroids</p>
+                <div class="arena-touch-controls" aria-label="Comet Drift touch controls">
+                    <button type="button" data-comet-key="up">Rise</button>
+                    <button type="button" data-comet-key="down">Dive</button>
+                </div>
+                <p>Original canvas game · no third-party artwork or branding</p>
+            </div>
+        </section>
         <!-- <section id="cards" class="cards-section">
             <h2>Card Section</h2>
             <div class="card-container">
@@ -572,6 +594,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/stick-arena.js"></script>
+    <script src="assets/js/sky-hopper.js"></script>
     <script type="module" src="assets/js/model.js"></script>
 </body>
 

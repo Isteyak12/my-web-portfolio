@@ -30,6 +30,7 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#professional-experience">Professional Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#stick-arena">Game</a></li>
             <li><a href="#leadership-experience">Leadership Experience</a></li>
             <li><a href="#additional-projects">Additional Projects</a></li>
             <!-- <li><a href="#cards">Card Section</a></li> -->
@@ -471,6 +472,30 @@
                 </div>
             </div>
         </section>
+        <section id="stick-arena" class="stick-arena-section">
+            <div class="arena-heading">
+                <div>
+                    <p class="arena-kicker">MINI ARCADE</p>
+                    <h2>Stick Arena</h2>
+                    <p>Take on the training bot in a quick physics-inspired stick fight.</p>
+                </div>
+                <button type="button" class="arena-restart" id="arena-restart">Restart match</button>
+            </div>
+            <div class="arena-frame">
+                <canvas id="stick-arena-canvas" width="720" height="360" aria-label="Stick Arena game. Use A and D to move, W to jump, J to punch, and K to kick."></canvas>
+                <div class="arena-overlay" id="arena-overlay">Press a control to begin</div>
+            </div>
+            <div class="arena-footer">
+                <p><kbd>A</kbd><kbd>D</kbd> move <kbd>W</kbd> jump <kbd>J</kbd> punch <kbd>K</kbd> kick</p>
+                <div class="arena-touch-controls" aria-label="Touch controls">
+                    <button type="button" data-arena-key="a">◀</button>
+                    <button type="button" data-arena-key="d">▶</button>
+                    <button type="button" data-arena-key="w">↑</button>
+                    <button type="button" data-arena-key="j">Punch</button>
+                    <button type="button" data-arena-key="k">Kick</button>
+                </div>
+            </div>
+        </section>
         <!-- <section id="cards" class="cards-section">
             <h2>Card Section</h2>
             <div class="card-container">
@@ -546,6 +571,7 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/stick-arena.js"></script>
     <script type="module" src="assets/js/model.js"></script>
 </body>
 

@@ -141,6 +141,25 @@ a, button, .btn, .navbar a {
     height: 20px; /* Adjust as needed */
 }
 
+/* Stick Arena mini-game */
+.stick-arena-section { overflow: hidden; }
+.arena-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 18px; }
+.arena-heading h2 { margin: 0; }
+.arena-heading p { margin: 3px 0 0; color: rgba(255, 255, 255, 0.7); }
+.arena-kicker { color: #5db3ff !important; font-size: 0.72em; font-weight: 800; letter-spacing: 0.16em; }
+.arena-restart, .arena-touch-controls button { border: 1px solid rgba(93, 179, 255, 0.55); background: rgba(30, 144, 255, 0.16); color: #e9f6ff; border-radius: 9px; font: inherit; font-weight: 700; padding: 8px 12px; transition: background .2s ease, transform .2s ease; }
+.arena-restart:hover, .arena-touch-controls button:hover { background: rgba(30, 144, 255, 0.38); transform: translateY(-1px); }
+.arena-frame { position: relative; border-radius: 13px; overflow: hidden; border: 1px solid rgba(93, 179, 255, 0.4); box-shadow: 0 0 28px rgba(30, 144, 255, 0.16); }
+#stick-arena-canvas { display: block; width: 100%; height: auto; touch-action: none; }
+.arena-overlay { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(3, 9, 21, 0.35); color: #fff; font-weight: 800; letter-spacing: 0.02em; text-shadow: 0 2px 8px #000; pointer-events: none; transition: opacity .2s ease; }
+.arena-overlay.hidden { opacity: 0; }
+.arena-footer { display: flex; justify-content: space-between; gap: 14px; align-items: center; margin-top: 13px; color: rgba(255,255,255,.68); font-size: .86em; }
+.arena-footer p { margin: 0; }
+.arena-footer kbd { display: inline-block; padding: 1px 6px; margin: 0 1px; border-radius: 4px; color: #fff; background: #22344f; border: 1px solid #3a5477; font: 700 .9em system-ui; }
+.arena-touch-controls { display: flex; gap: 5px; }
+.arena-touch-controls button { min-width: 34px; padding: 6px 9px; font-size: .9em; }
+@media (max-width: 600px) { .arena-heading, .arena-footer { flex-direction: column; } .arena-restart { align-self: stretch; } .arena-touch-controls { width: 100%; } .arena-touch-controls button { flex: 1; } }
+
 .content {
     position: relative;
     z-index: 2;

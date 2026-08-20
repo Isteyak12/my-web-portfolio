@@ -231,6 +231,48 @@ header {
     text-align: center;
 }
 
+.terminal-greeting {
+    font-family: 'Consolas', 'SFMono-Regular', 'Fira Code', 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    letter-spacing: 0;
+}
+
+.terminal-prompt {
+    color: #4da6ff;
+    opacity: 0.75;
+    flex-shrink: 0;
+}
+
+.terminal-typed {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 23ch;
+    border-right: 3px solid #4da6ff;
+    animation: terminal-type 1.8s steps(23, end) 0.3s 1 both,
+               terminal-caret 0.8s step-end infinite;
+}
+
+@keyframes terminal-type {
+    from { max-width: 0; }
+    to { max-width: 23ch; }
+}
+
+@keyframes terminal-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #4da6ff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .terminal-typed {
+        max-width: 23ch;
+        animation: terminal-caret 0.8s step-end infinite;
+    }
+}
+
 .intro-section h3 {
     margin-top: 8px;
     margin-bottom: 24px;
@@ -276,15 +318,15 @@ header {
 }
 
 .bio-main {
-    font-size: 1.05em !important;
-    line-height: 1.8 !important;
-    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 1em !important;
+    line-height: 1.75 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .bio-main strong,
 .intro-section p strong {
-    color: #5db3ff;
-    font-weight: 700;
+    color: #7ec4ff;
+    font-weight: 500;
 }
 
 .bio-cta {
@@ -800,7 +842,12 @@ section {
     h2 {
         font-size: 1.6em;
     }
-    
+
+    .terminal-greeting {
+        font-size: 17px;
+        gap: 6px;
+    }
+
     .content {
         padding: 20px;
         max-width: 95%;
@@ -871,6 +918,13 @@ section {
     .leadership-achievements {
         grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .terminal-greeting {
+        font-size: 14px;
+        gap: 5px;
     }
 }
 

@@ -1,0 +1,9 @@
+name = "portfolio-chatbot"
+main = "src/index.js"
+compatibility_date = "2026-07-30"
+
+# The Anthropic API key is NOT set here. Set it as a secret instead:
+#   wrangler secret put ANTHROPIC_API_KEY
+# Secrets never appear in this file, in git, or in the Cloudflare dashboard's
+# plaintext view — they're encrypted at rest and only injected into `env` at
+# request time.

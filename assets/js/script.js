@@ -24,6 +24,14 @@ document.querySelectorAll('.navbar a').forEach(link => {
 
 // ========== CHATBOT ==========
 (function () {
+    // Update after deploying the Cloudflare Worker (see worker/README.md).
+    // Until then (or if the Worker is unreachable), the bot falls back to
+    // the local keyword-matched FAQ below — no API key or backend involved
+    // in that path.
+    const CHATBOT_API_URL = 'https://portfolio-chatbot.YOUR-SUBDOMAIN.workers.dev';
+    const MAX_HISTORY = 6;
+    const REQUEST_TIMEOUT_MS = 15000;
+
     const toggle = document.getElementById('chatbot-toggle');
     const win = document.getElementById('chatbot-window');
     const closeBtn = document.getElementById('chatbot-close');
@@ -32,6 +40,8 @@ document.querySelectorAll('.navbar a').forEach(link => {
     const msgArea = document.getElementById('chatbot-messages');
     const suggestions = document.getElementById('chatbot-suggestions');
     if (!toggle || !win) return;
+
+    const conversation = []; // {role: 'user'|'assistant', content: string}[]
 
     // Toggle open/close
     toggle.addEventListener('click', () => win.classList.toggle('open'));
@@ -53,7 +63,42 @@ document.querySelectorAll('.navbar a').forEach(link => {
         if (!text) return;
         addMsg(text, 'user');
         input.value = '';
-        setTimeout(() => addMsg(getReply(text), 'bot'), 400);
+
+        const priorHistory = conversation.slice(-MAX_HISTORY);
+        const typingEl = addMsg('...', 'bot');
+
+        fetchAIReply(text, priorHistory)
+            .then(reply => {
+                typingEl.textContent = reply;
+                conversation.push({ role: 'user', content: text }, { role: 'assistant', content: reply });
+            })
+            .catch(() => {
+                // Worker unreachable, not deployed yet, rate-limited, etc. —
+                // degrade to the local FAQ so the chatbot still answers.
+                typingEl.textContent = getReply(text);
+            });
+    }
+
+    async function fetchAIReply(message, history) {
+        if (!CHATBOT_API_URL || CHATBOT_API_URL.includes('YOUR-SUBDOMAIN')) {
+            throw new Error('Chatbot API not configured');
+        }
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+        try {
+            const res = await fetch(CHATBOT_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message, history }),
+                signal: controller.signal,
+            });
+            if (!res.ok) throw new Error('Bad response: ' + res.status);
+            const data = await res.json();
+            if (!data.reply) throw new Error('No reply in response');
+            return data.reply;
+        } finally {
+            clearTimeout(timeoutId);
+        }
     }
 
     function addMsg(text, type) {
@@ -62,6 +107,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
         div.textContent = text;
         msgArea.appendChild(div);
         msgArea.scrollTop = msgArea.scrollHeight;
+        return div;
     }
 
     // FAQ knowledge base — keyword matching

@@ -81,9 +81,21 @@ a, button, .btn, .navbar a {
 
 .navbar li {
     display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.navbar li:hover {
+    padding-left: 0;
+    color: inherit;
 }
 
 .navbar a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: white;
     text-decoration: none;
     font-size: 1.1em;
@@ -97,6 +109,12 @@ a, button, .btn, .navbar a {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+    font-size: 0.95em;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
 .btn {
@@ -252,13 +270,17 @@ header {
     white-space: nowrap;
     max-width: 23ch;
     border-right: 3px solid #4da6ff;
-    animation: terminal-type 1.8s steps(23, end) 0.3s 1 both,
+    animation: terminal-type-loop 6s linear 0.3s infinite,
                terminal-caret 0.8s step-end infinite;
 }
 
-@keyframes terminal-type {
-    from { max-width: 0; }
-    to { max-width: 23ch; }
+@keyframes terminal-type-loop {
+    0%   { max-width: 0; }
+    3%   { max-width: 0; animation-timing-function: steps(23, end); }
+    35%  { max-width: 23ch; }
+    65%  { max-width: 23ch; animation-timing-function: steps(23, end); }
+    97%  { max-width: 0; }
+    100% { max-width: 0; }
 }
 
 @keyframes terminal-caret {
@@ -868,27 +890,60 @@ section {
         white-space: normal;
     }
 
+    .navbar.open {
+        min-width: 240px;
+        padding: 12px;
+        border-radius: 18px;
+        background: linear-gradient(165deg, rgba(12, 26, 47, 0.98), rgba(5, 11, 22, 0.98));
+        border: 1px solid rgba(30, 144, 255, 0.32);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(30, 144, 255, 0.16);
+    }
+
     .hamburger {
         display: flex;
+        border-radius: 50%;
+        transition: background 0.2s ease;
+    }
+
+    .navbar.open .hamburger {
+        align-self: flex-end;
+    }
+
+    .hamburger:hover {
+        background: rgba(255, 255, 255, 0.12);
     }
 
     .navbar ul {
         display: none;
         flex-direction: column;
-        gap: 6px;
+        gap: 4px;
         width: 100%;
         margin-top: 12px;
     }
 
     .navbar.open ul {
         display: flex;
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .navbar a {
         font-size: 1em;
-        padding: 10px 14px;
-        display: block;
-        text-align: left;
+        padding: 12px 14px;
+        display: flex;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .navbar.open a:hover {
+        background: rgba(30, 144, 255, 0.16);
+        transform: translateX(4px);
+        box-shadow: none;
+    }
+
+    .navbar.open a:active {
+        background: rgba(30, 144, 255, 0.22);
     }
 
     .projects-grid {
@@ -988,6 +1043,29 @@ section {
     background: rgba(30, 144, 255, 0.25);
     border-color: rgba(30, 144, 255, 0.5);
     font-weight: 600;
+}
+
+/* Tech Stack Section - GitHub-style badges, dropped into the existing skill-category layout */
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-row a {
+    display: inline-flex;
+    line-height: 0;
+    transition: transform 0.2s ease;
+}
+
+.badge-row a:hover {
+    transform: translateY(-2px);
+}
+
+.badge-row img {
+    height: 26px;
+    border-radius: 4px;
 }
 
 /* Projects Section - Card Grid Layout */
@@ -1092,6 +1170,48 @@ section {
     border-color: rgba(30, 144, 255, 0.4);
 }
 
+/* Project Links (GitHub / demo / devpost, etc.) */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 14px;
+    background: rgba(30, 144, 255, 0.12);
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #5db3ff !important;
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover {
+    background: rgba(30, 144, 255, 0.24);
+    border-color: rgba(30, 144, 255, 0.5);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.project-link-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(64%) sepia(46%) saturate(1934%) hue-rotate(180deg) brightness(103%) contrast(101%);
+    transition: filter 0.25s ease;
+}
+
+.project-link:hover .project-link-icon {
+    filter: brightness(0) invert(1);
+}
+
 /* Job Description Paragraph Style */
 .job-description {
     color: rgba(255, 255, 255, 0.87);
@@ -1129,7 +1249,7 @@ section {
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, #ffd700, #ffed4e);
+    background: linear-gradient(180deg, #1e90ff, #4da6ff);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease;
@@ -1141,37 +1261,23 @@ section {
 
 .leadership-card:hover {
     background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 215, 0, 0.4);
+    border-color: rgba(30, 144, 255, 0.4);
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(30, 144, 255, 0.25);
 }
 
 .leadership-header {
     margin-bottom: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .leadership-role {
-    font-family: 'Georgia', 'Playfair Display', 'Times New Roman', serif;
     font-weight: 700;
-    font-size: 1.45em;
-    color: #ffd700;
-    letter-spacing: 0.5px;
+    font-size: 1.15em;
+    color: #5db3ff;
+    letter-spacing: -0.2px;
     margin: 0 0 10px 0;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #ffd700, #fff8dc, #ffd700);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 3s ease infinite;
-}
-
-@keyframes shimmer {
-    0% { background-position: 0% center; }
-    50% { background-position: 100% center; }
-    100% { background-position: 0% center; }
 }
 
 .leadership-meta {
@@ -1225,10 +1331,7 @@ section {
 .stat-number {
     font-size: 2em;
     font-weight: 700;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #5db3ff;
     line-height: 1.2;
     margin-bottom: 6px;
 }

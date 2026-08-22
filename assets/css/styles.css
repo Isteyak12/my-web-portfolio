@@ -111,6 +111,10 @@ a, button, .btn, .navbar a {
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
+nav.navbar a:hover {
+    text-decoration: none;
+}
+
 .nav-icon {
     font-size: 0.95em;
     line-height: 1;

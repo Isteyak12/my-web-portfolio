@@ -74,24 +74,25 @@
         </header>
         <section id="intro" class="intro-section">
             <h2 class="terminal-greeting"><span class="terminal-prompt">&gt;</span><span class="terminal-typed">hello friends, welcome!</span></h2>
-            <h3>Machine Vision Specialist | Former Geospatial Vision Researcher</h3>
+            <h3>Machine Vision Specialist | Building Towards Robotics</h3>
             <div class="bio-highlights">
                 <div class="bio-badge">🏆 WinHacks 2024 Winner (3rd Place)</div>
                 <div class="bio-badge">🎯 HackTheNorth 2025 Candidate</div>
                 <div class="bio-badge">🛰️ Geospatial AI Researcher</div>
                 <div class="bio-badge">🧠 Siamese U-Net Specialist</div>
+                <div class="bio-badge">🤖 Isaac Sim Contributor</div>
             </div>
             <p class="bio-main">
-                I specialize in <strong>machine vision and geospatial computer vision</strong>, building deep learning models that analyze satellite imagery, industrial production systems, and detect changes in Earth observation data. I recently completed geospatial research at the <strong>GeoVision Lab, University of Windsor</strong>, where I developed and trained a <strong>Siamese Attention U-Net model</strong> using TensorFlow/Keras for change detection tasks on geospatial image pairs. Currently, I'm focused on <strong>industrial vision inspection</strong>, working as a Vision System Inspection Technician where I monitor high-precision defect detection systems for battery manufacturing using advanced data analysis frameworks.
+                I turn pixels into decisions — training deep learning models that read satellite imagery, catch microscopic defects on live battery production lines, and, most recently, drive robots in simulation. I previously completed geospatial research at the <strong>GeoVision Lab, University of Windsor</strong>, training a <strong>Siamese Attention U-Net model</strong> for change detection on satellite image pairs, and currently work as a Vision System Inspection Technician, running high-precision defect detection on live battery manufacturing lines.
             </p>
             <p>
-                My expertise bridges <strong>computer vision research</strong> and <strong>production-ready web applications</strong>. I've integrated state-of-the-art vision models (YOLOv8, YOLO11, MediaPipe, RetinaFace) into full-stack systems built with <strong>React, Next.js, and Node.js</strong>, creating intelligent applications that process visual data in real-time.
+                My toolkit bridges <strong>computer vision research</strong> and <strong>production-ready software</strong> — shipping vision models (YOLOv8, YOLO11, MediaPipe, RetinaFace) inside full-stack systems built with <strong>React, Next.js, and Node.js</strong>, so intelligent systems don't just work in a notebook, they work in production.
             </p>
             <p>
-                From winning <strong>3rd place at WinHacks 2024</strong> with a geospatial energy visualization app to participating in <strong>HackTheNorth 2025</strong> (Canada's premier hackathon), I thrive at the intersection of <strong>deep learning, satellite imagery, and scalable web development</strong>. Whether it's training attention-based architectures, building embedded vision systems on ESP32, or architecting full-stack AI applications—I turn research into reality.
+                Lately I've been pointing that same toolkit at robotics: deploying <strong>NVIDIA Isaac Sim</strong> on a cloud RTX 4090, scripting pick-and-place tasks with <strong>RMPflow motion planning</strong>, and landing a merged pull request on the open-source <strong>isaacsim-mcp-server</strong> project. From winning <strong>3rd place at WinHacks 2024</strong> to competing at <strong>HackTheNorth 2025</strong>, I like building things that move — whether that's a satellite-scale model, a browser, or a robot arm.
             </p>
             <p class="bio-cta">
-                💡 <em>Passionate about: Change detection, attention mechanisms, geospatial analysis, and deploying vision AI at scale.</em>
+                💡 <em>Currently chasing: sim-to-real robotics, edge-AI inference, and making machines see — and move — smarter.</em>
             </p>
         </section>
         <section id="education" class="education-section">
@@ -383,6 +384,30 @@
 
                 <div class="project-card">
                     <div class="project-header">
+                        <h3 class="project-title">AI-Driven Robot Simulation on Cloud GPU</h3>
+                        <span class="project-date">October 2026</span>
+                    </div>
+                    <p class="project-description">
+                        Deployed <strong>NVIDIA Isaac Sim 5.1</strong> headless on a cloud RTX 4090 and connected it to Claude Code through the open-source <strong>isaacsim-mcp-server</strong>, building and running robots and physics scenes from plain-English prompts. Built a <strong>Franka FR3 pick-and-place task</strong> with RMPflow motion planning and an Action Graph state machine, verifying the cube landed within 1.2 cm of target across logged runs. Contributed a headless-browser live-view feature back to the open-source project — MJPEG streaming, camera controls, unit tests, and docs — merged after passing CI.
+                    </p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">NVIDIA Isaac Sim</span>
+                        <span class="tech-tag">Franka FR3</span>
+                        <span class="tech-tag">RMPflow</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Claude Code</span>
+                        <span class="tech-tag">RTX 4090</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Isteyak12/isaacsim-mcp-server" target="_blank" rel="noopener" class="project-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="" class="project-link-icon">
+                            View Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
                         <h3 class="project-title">tour2toronto</h3>
                         <span class="project-date">August 2026</span>
                     </div>
@@ -408,18 +433,20 @@
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">YOLOv8 TensorRT Inference Benchmark</h3>
+                        <h3 class="project-title">MLOps Pipeline & CUDA Image Filter Lab</h3>
                         <span class="project-date">July 2026</span>
                     </div>
                     <p class="project-description">
-                        Benchmarked <strong>YOLOv8n inference</strong> on an NVIDIA Tesla T4 GPU, comparing native PyTorch against a <strong>TensorRT-exported engine</strong>, achieving <strong>74.3 FPS (13.47 ms/frame)</strong> versus 67.3 FPS with PyTorch — a 1.10x speedup. Built an end-to-end benchmarking pipeline with Ultralytics, exporting to an optimized TensorRT engine and generating automated FPS/latency comparison charts.
+                        Built <strong>mlops-base</strong>, a config-driven MLOps pipeline in Python (scikit-learn) for training, evaluating, and predicting with a classification model, exposed via CLI entry points and a <strong>FastAPI inference API</strong> (/health, /predict) with YAML-based configuration, optional MLflow experiment tracking, and pytest smoke tests. Developed a <strong>CuPy-based CUDA/GPU-accelerated image-filtering benchmark</strong> (blur and edge detection) with an interactive Next.js, React, and TypeScript frontend for live demonstration.
                     </p>
                     <div class="project-tech-stack">
-                        <span class="tech-tag">YOLOv8</span>
-                        <span class="tech-tag">TensorRT</span>
-                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">MLflow</span>
                         <span class="tech-tag">CUDA</span>
-                        <span class="tech-tag">Ultralytics</span>
+                        <span class="tech-tag">CuPy</span>
+                        <span class="tech-tag">Next.js</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Isteyak12/my_tensorrt_gpu" target="_blank" rel="noopener" class="project-link">

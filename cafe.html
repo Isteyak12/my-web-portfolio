@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isteyak's Pixel Café</title>
+    <meta name="description" content="A rainy synthwave café in pixelated 3D. Click the thought cloud to open Isteyak's resume.">
+    <link rel="icon" href="assets/images/favicon2.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/cafe.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.170.0/build/three.module.js"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="stage" aria-hidden="true"></div>
+
+    <header class="hud">
+        <a href="index.html" class="hud-btn">&larr; portfolio</a>
+        <span class="hud-sign">ISTEYAK'S CAFÉ</span>
+    </header>
+
+    <a id="bubble" class="bubble" href="isteyak_resume.pdf" target="_blank" rel="noopener" aria-label="Click me: open Isteyak's resume (PDF)">
+        <span class="bubble-float">
+            <svg class="bubble-cloud" viewBox="0 0 200 110" aria-hidden="true">
+                <path d="M38 88 C14 88 8 66 24 58 C14 42 30 24 50 32 C56 12 84 8 96 24 C108 6 142 8 148 30 C170 22 192 40 180 60 C196 72 184 94 162 90 C152 104 126 104 116 94 C104 106 74 106 64 94 C56 100 42 98 38 88 Z"/>
+            </svg>
+            <span class="bubble-text">click me</span>
+            <span class="bubble-dot bubble-dot-1"></span>
+            <span class="bubble-dot bubble-dot-2"></span>
+        </span>
+    </a>
+
+    <p class="hint">rainy night in neo-tokyo &middot; tap the cloud for my resume</p>
+
+    <div class="fallback" id="fallback" hidden>
+        <p>Your browser couldn't start 3D graphics.</p>
+        <a href="isteyak_resume.pdf" target="_blank" rel="noopener">Open my resume</a>
+        <a href="index.html">Back to portfolio</a>
+    </div>
+
+    <noscript>
+        <div class="fallback">
+            <p>This café needs JavaScript.</p>
+            <a href="isteyak_resume.pdf">Open my resume</a>
+            <a href="index.html">Back to portfolio</a>
+        </div>
+    </noscript>
+
+    <script type="module" src="assets/js/cafe.js"></script>
+</body>
+
+</html>

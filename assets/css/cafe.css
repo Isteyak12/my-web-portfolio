@@ -1,0 +1,240 @@
+:root {
+    --ink: #1a1030;
+    --neon-pink: #ff5fb4;
+    --neon-cyan: #48e2ff;
+    --night: #0b0716;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: var(--night);
+    color: #f4ecff;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+#stage {
+    position: fixed;
+    inset: 0;
+}
+
+#stage canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+body.hover-man #stage {
+    cursor: pointer;
+}
+
+.hud {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.hud-btn,
+.hud-sign {
+    pointer-events: auto;
+    font-size: 11px;
+    line-height: 1;
+    padding: 10px 12px;
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+}
+
+.hud-btn {
+    color: var(--ink);
+    background: #fff4c2;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.hud-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.hud-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--ink);
+}
+
+.hud-sign {
+    color: var(--neon-cyan);
+    background: rgba(11, 7, 22, 0.75);
+    text-shadow: 0 0 6px var(--neon-cyan);
+    pointer-events: none;
+}
+
+.bubble {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: block;
+    width: clamp(130px, 17vw, 190px);
+    color: var(--ink);
+    text-decoration: none;
+    transform: translate(-50%, -100%);
+    will-change: transform;
+    visibility: hidden;
+}
+
+.bubble.ready {
+    visibility: visible;
+}
+
+.bubble-float {
+    position: relative;
+    display: block;
+    animation: bubble-bob 2.8s ease-in-out infinite;
+}
+
+.bubble-cloud {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(4px 4px 0 var(--ink));
+}
+
+.bubble-cloud path {
+    fill: #fff;
+    stroke: var(--ink);
+    stroke-width: 5;
+    stroke-linejoin: round;
+    transition: fill 0.15s ease;
+}
+
+.bubble-text {
+    position: absolute;
+    inset: 0 0 8% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10px, 1.15vw, 13px);
+    letter-spacing: 1px;
+}
+
+.bubble-dot {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+}
+
+.bubble-dot-1 {
+    width: 16px;
+    height: 16px;
+    left: 34%;
+    bottom: -14px;
+}
+
+.bubble-dot-2 {
+    width: 10px;
+    height: 10px;
+    left: 28%;
+    bottom: -30px;
+}
+
+.bubble:hover .bubble-cloud path,
+.bubble:focus-visible .bubble-cloud path {
+    fill: #fff4c2;
+}
+
+.bubble:hover .bubble-float {
+    animation-duration: 1.2s;
+}
+
+.bubble:focus-visible {
+    outline: 3px dashed var(--neon-cyan);
+    outline-offset: 6px;
+}
+
+@keyframes bubble-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.hint {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    margin: 0;
+    transform: translateX(-50%);
+    width: min(560px, calc(100% - 32px));
+    padding: 8px 12px;
+    font-size: 9px;
+    line-height: 1.6;
+    text-align: center;
+    color: #ffd6ec;
+    background: rgba(11, 7, 22, 0.7);
+    border: 2px solid rgba(255, 95, 180, 0.6);
+    z-index: 2;
+}
+
+.fallback {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+    background: var(--night);
+    z-index: 5;
+}
+
+.fallback[hidden] {
+    display: none;
+}
+
+.fallback a {
+    color: var(--neon-cyan);
+}
+
+@media (max-width: 600px) {
+    .hud-btn,
+    .hud-sign {
+        font-size: 9px;
+        padding: 8px 9px;
+    }
+
+    .hint {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hud-sign {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bubble-float {
+        animation: none;
+    }
+}

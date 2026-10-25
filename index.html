@@ -43,15 +43,18 @@
     <div class="content">
         <header>
             <div class="intro-section">
-                <img src="assets/images/linkedin_profile.jpg" alt="Profile Picture" class="profile-picture">
+                <div class="profile-wrap">
+                    <img src="assets/images/linkedin_profile.jpg" alt="Profile Picture" class="profile-picture">
+                    <div class="lean-char" aria-hidden="true">
+                        <img src="assets/images/leaning_figure.png?v=2" alt="" class="lean-figure">
+                        <span class="phone-glow"></span>
+                    </div>
+                </div>
                 <h1>Isteyak</h1>
                 <div class="contact-info">
                     <div>
                         <a href="mailto:isteyakislam12@gmail.com" style="color: white; text-decoration: none;">isteyakislam12@gmail.com</a>
                     </div>
-                    <!-- <div>
-                        <span><strong>(437)-849-5115</strong></span>
-                    </div> -->
                     <div>
                         <strong>📍 open to remote & relocation</strong>
                     </div>
@@ -728,8 +731,38 @@
         </section> -->
         <section id="model" class="model-section">
             <!-- <h2>3D Model</h2> -->
-            <div id="model-container" style="width: 100%; height: 500px;"></div>
+            <a href="cafe.html" class="cafe-portal">
+                <div id="model-container" aria-hidden="true"></div>
+                <span class="cafe-portal-label">step into the pixel café &rarr;</span>
+            </a>
         </section>
+    </div>
+
+    <!-- Vertical music player, sits above the cat -->
+    <div class="fm-player" id="fm-player" data-video="RX7fZ5I709Y">
+        <button type="button" class="fm-disc" id="fm-disc" aria-label="Play music">
+            <img src="https://i.ytimg.com/vi/RX7fZ5I709Y/hqdefault.jpg" alt="" loading="lazy">
+        </button>
+        <div class="fm-body">
+            <div class="fm-title" title="Vanze – Forever (feat. Brenton Mattheus) · NCS">
+                <span class="fm-marquee">
+                    <span><b>ISTEYAK.FM</b> · Vanze – Forever (feat. Brenton Mattheus) · NCS ·&nbsp;</span>
+                    <span aria-hidden="true"><b>ISTEYAK.FM</b> · Vanze – Forever (feat. Brenton Mattheus) · NCS ·&nbsp;</span>
+                </span>
+            </div>
+            <button type="button" class="fm-btn" id="fm-play" aria-label="Play music">
+                <svg class="fm-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                <svg class="fm-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.5v13M15.5 5.5v13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </button>
+            <button type="button" class="fm-btn" id="fm-mute" aria-label="Mute">
+                <svg class="fm-icon-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 9a4 4 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <svg class="fm-icon-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 9.5l5 5M20.5 9.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+        <button type="button" class="fm-collapse" id="fm-collapse" aria-label="Collapse music player" aria-expanded="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="fm-yt" aria-hidden="true"><div id="fm-yt"></div></div>
     </div>
 
     <!-- Tiny cat at the bottom -->
@@ -763,6 +796,7 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/music-player.js"></script>
     <script src="assets/js/stick-arena.js"></script>
     <script src="assets/js/sky-hopper.js"></script>
     <script type="module" src="assets/js/model.js"></script>

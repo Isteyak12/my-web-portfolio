@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isteyak's Pixel Café</title>
-    <meta name="description" content="A rainy synthwave café in pixelated 3D. Click the thought cloud to open Isteyak's resume.">
+    <meta name="description" content="A rainy synthwave café in pixelated 3D. Click the thought cloud to play Bonk-a-Hamster.">
     <link rel="icon" href="assets/images/favicon2.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/cafe.css">
+    <link rel="stylesheet" href="assets/css/cafe.css?v=4">
     <script type="importmap">
         {
             "imports": {
@@ -24,11 +24,16 @@
     <div id="stage" aria-hidden="true"></div>
 
     <header class="hud">
-        <a href="index.html" class="hud-btn">&larr; portfolio</a>
+        <div class="hud-left">
+            <a href="index.html" class="hud-btn">&larr; portfolio</a>
+            <a href="isteyak_resume.pdf" class="hud-btn" target="_blank" rel="noopener">resume</a>
+            <button type="button" class="hud-btn hud-play" id="hud-play">&#9654; bonk</button>
+            <button type="button" class="hud-btn hud-play hud-drone" id="hud-drone">&#9654; drone</button>
+        </div>
         <span class="hud-sign">ISTEYAK'S CAFÉ</span>
     </header>
 
-    <a id="bubble" class="bubble" href="isteyak_resume.pdf" target="_blank" rel="noopener" aria-label="Click me: open Isteyak's resume (PDF)">
+    <button type="button" id="bubble" class="bubble" aria-label="Click me: play Bonk-a-Hamster">
         <span class="bubble-float">
             <svg class="bubble-cloud" viewBox="0 0 200 110" aria-hidden="true">
                 <path d="M38 88 C14 88 8 66 24 58 C14 42 30 24 50 32 C56 12 84 8 96 24 C108 6 142 8 148 30 C170 22 192 40 180 60 C196 72 184 94 162 90 C152 104 126 104 116 94 C104 106 74 106 64 94 C56 100 42 98 38 88 Z"/>
@@ -37,9 +42,37 @@
             <span class="bubble-dot bubble-dot-1"></span>
             <span class="bubble-dot bubble-dot-2"></span>
         </span>
-    </a>
+    </button>
 
-    <p class="hint">rainy night in neo-tokyo &middot; tap the cloud for my resume</p>
+    <p class="hint">rainy night in neo-tokyo &middot; two arcade games up top, or tap the cloud</p>
+
+    <div class="arcade" id="arcade" role="dialog" aria-modal="true" aria-labelledby="arcade-title" hidden>
+        <div class="arcade-cabinet">
+            <div class="arcade-bar">
+                <span class="arcade-title" id="arcade-title">BONK-A-HAMSTER</span>
+                <div class="arcade-actions">
+                    <button type="button" class="arcade-btn" id="arcade-sound" aria-pressed="true">SFX ON</button>
+                    <button type="button" class="arcade-btn arcade-close" id="arcade-close" aria-label="Close game">&times;</button>
+                </div>
+            </div>
+            <canvas id="arcade-canvas" class="arcade-screen" width="192" height="144" tabindex="0" aria-label="Bonk-a-Hamster game. Click or tap hamsters as they pop up, or press keys 1 to 9 for the holes. Avoid the robot."></canvas>
+            <p class="arcade-help">click / tap the hamsters &middot; keys 1&ndash;9 work too &middot; esc to close</p>
+        </div>
+    </div>
+
+    <div class="arcade" id="drone-arcade" role="dialog" aria-modal="true" aria-labelledby="drone-title" hidden>
+        <div class="arcade-cabinet">
+            <div class="arcade-bar">
+                <span class="arcade-title" id="drone-title">NEON DRONE: PORTAL RUN</span>
+                <div class="arcade-actions">
+                    <button type="button" class="arcade-btn" id="drone-sound" aria-pressed="true">SFX ON</button>
+                    <button type="button" class="arcade-btn arcade-close" id="drone-close" aria-label="Close game">&times;</button>
+                </div>
+            </div>
+            <canvas id="drone-canvas" class="arcade-screen drone-screen" width="192" height="144" tabindex="0" aria-label="Neon Drone game. Steer the drone with the mouse, by dragging, or with the arrow keys or W A S D, and fly through the glowing portals."></canvas>
+            <p class="arcade-help">steer with mouse / drag / arrows / wasd &middot; fly through the rings &middot; esc to close</p>
+        </div>
+    </div>
 
     <div class="fallback" id="fallback" hidden>
         <p>Your browser couldn't start 3D graphics.</p>
@@ -55,7 +88,9 @@
         </div>
     </noscript>
 
-    <script type="module" src="assets/js/cafe.js"></script>
+    <script src="assets/js/hamster-game.js?v=3"></script>
+    <script src="assets/js/drone-game.js?v=2"></script>
+    <script type="module" src="assets/js/cafe.js?v=3"></script>
 </body>
 
 </html>

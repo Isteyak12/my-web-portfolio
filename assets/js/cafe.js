@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 
-const RESUME_URL = 'isteyak_resume.pdf';
 const stage = document.getElementById('stage');
 const bubble = document.getElementById('bubble');
 
@@ -707,7 +706,7 @@ renderer.domElement.addEventListener('pointermove', (e) => {
     document.body.classList.toggle('hover-man', pointerHitsMan(e));
 });
 renderer.domElement.addEventListener('click', (e) => {
-    if (pointerHitsMan(e)) window.open(RESUME_URL, '_blank', 'noopener');
+    if (pointerHitsMan(e)) document.dispatchEvent(new CustomEvent('cafe:play'));
 });
 
 const bubbleAnchor = new THREE.Vector3();

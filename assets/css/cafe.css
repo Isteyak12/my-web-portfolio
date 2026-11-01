@@ -83,7 +83,35 @@ body.hover-man #stage {
     pointer-events: none;
 }
 
+.hud-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button.hud-btn {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.hud-play {
+    color: #fff;
+    background: var(--neon-pink);
+    text-shadow: 1px 1px 0 var(--ink);
+    animation: hud-play-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes hud-play-pulse {
+    0%, 100% { box-shadow: 4px 4px 0 var(--ink), 0 0 0 rgba(255, 95, 180, 0); }
+    50% { box-shadow: 4px 4px 0 var(--ink), 0 0 16px rgba(255, 95, 180, 0.8); }
+}
+
 .bubble {
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
     position: fixed;
     left: 0;
     top: 0;
@@ -235,6 +263,134 @@ body.hover-man #stage {
 
 @media (prefers-reduced-motion: reduce) {
     .bubble-float {
+        animation: none;
+    }
+}
+
+/* ---------- arcade: Bonk-a-Hamster ---------- */
+.arcade {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(6, 3, 14, 0.72);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.arcade[hidden] {
+    display: none;
+}
+
+.arcade-cabinet {
+    width: min(100%, 680px, calc((100vh - 150px) * 4 / 3 + 28px));
+    padding: 12px 14px 10px;
+    background: linear-gradient(180deg, #24123f, #140a26);
+    border: 3px solid var(--ink);
+    box-shadow:
+        0 0 0 3px var(--neon-pink),
+        0 0 0 6px var(--ink),
+        0 0 40px rgba(255, 95, 180, 0.45),
+        8px 8px 0 6px rgba(0, 0, 0, 0.5);
+    animation: arcade-in 0.22s ease-out;
+}
+
+@keyframes arcade-in {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.arcade-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.arcade-title {
+    font-size: clamp(10px, 2.4vw, 15px);
+    color: #ffd27a;
+    text-shadow: 0 0 6px rgba(255, 210, 122, 0.8), 2px 2px 0 var(--ink);
+    letter-spacing: 1px;
+}
+
+.arcade-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.arcade-btn {
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 1;
+    padding: 8px 10px;
+    color: var(--ink);
+    background: #fff4c2;
+    border: 3px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    cursor: pointer;
+}
+
+.arcade-close {
+    font-size: 16px;
+    padding: 4px 10px 6px;
+}
+
+.arcade-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--ink);
+}
+
+.arcade-btn:focus-visible,
+.arcade-screen:focus-visible {
+    outline: 3px dashed var(--neon-cyan);
+    outline-offset: 3px;
+}
+
+.arcade-screen {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    border: 3px solid var(--ink);
+    box-shadow: 0 0 0 2px var(--neon-cyan), inset 0 0 20px rgba(0, 0, 0, 0.6);
+    cursor: none;
+    touch-action: manipulation;
+}
+
+.arcade-help {
+    margin: 10px 0 0;
+    font-size: 8px;
+    line-height: 1.6;
+    text-align: center;
+    color: #c9b8ff;
+}
+
+.drone-screen {
+    touch-action: none;
+}
+
+.hud-drone {
+    color: var(--ink);
+    background: var(--neon-cyan);
+    animation-delay: 0.8s;
+}
+
+@media (hover: none) {
+    .arcade-screen {
+        cursor: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .arcade-cabinet,
+    .hud-play {
         animation: none;
     }
 }

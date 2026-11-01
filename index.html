@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        try { if (localStorage.getItem('portfolio-theme') === 'overdrive') document.documentElement.setAttribute('data-theme', 'overdrive'); } catch (e) {}
+    </script>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/overdrive.css">
     <link rel="icon" href="assets/images/favicon2.ico" type="image/x-icon">
     <script type="importmap">
         {
@@ -771,6 +775,17 @@
         <div class="cat-emoji">🐱</div>
     </div>
 
+    <!-- Theme switch: blue <-> Overdrive (orange/black) -->
+    <button type="button" class="theme-switch" id="theme-switch" aria-pressed="false" aria-label="Switch to Overdrive orange theme">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <polygon points="16,3 27,9.5 27,22.5 16,29 5,22.5 5,9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="16" cy="16" r="4.5" fill="currentColor"/>
+            <path d="M16 3v6M27 22.5l-5.2-3M5 22.5l5.2-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="theme-switch-tip">OVERDRIVE</span>
+    </button>
+    <div class="od-wave" id="od-wave" aria-hidden="true"></div>
+
     <!-- Chatbot -->
     <div class="chatbot-toggle" id="chatbot-toggle" title="Chat with me!">💬</div>
     <div class="chatbot-window" id="chatbot-window">
@@ -797,6 +812,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/music-player.js"></script>
+    <script src="assets/js/theme-switch.js"></script>
     <script src="assets/js/stick-arena.js"></script>
     <script src="assets/js/sky-hopper.js"></script>
     <script type="module" src="assets/js/model.js"></script>

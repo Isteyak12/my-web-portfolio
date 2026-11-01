@@ -1,0 +1,725 @@
+/* Overdrive theme: orange-on-black. Colour overrides first, hand-tuned extras after. */
+
+html[data-theme="overdrive"] .navbar {
+    background: linear-gradient(135deg, rgba(255, 135, 30, 0.95), rgba(139, 73, 16, 0.95));
+    box-shadow: 0 8px 32px rgba(255, 135, 30, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+    scrollbar-color: #ff871e #333;
+}
+
+html[data-theme="overdrive"] .navbar::-webkit-scrollbar-thumb {
+    background-color: #ff871e;
+}
+
+html[data-theme="overdrive"] .btn-linkedin {
+    background: linear-gradient(135deg, #b54d00, #853900);
+}
+
+html[data-theme="overdrive"] .btn:hover {
+    box-shadow: 0 8px 20px rgba(255, 135, 30, 0.4);
+}
+
+html[data-theme="overdrive"] .arena-kicker {
+    color: #ffa75d !important;
+}
+
+html[data-theme="overdrive"] .arena-restart, html[data-theme="overdrive"] .arena-touch-controls button {
+    border: 1px solid rgba(255, 167, 93, 0.55);
+    background: rgba(255, 135, 30, 0.16);
+    color: #fff3e9;
+}
+
+html[data-theme="overdrive"] .arena-restart:hover, html[data-theme="overdrive"] .arena-touch-controls button:hover {
+    background: rgba(255, 135, 30, 0.38);
+}
+
+html[data-theme="overdrive"] .arena-frame {
+    border: 1px solid rgba(255, 167, 93, 0.4);
+    box-shadow: 0 0 28px rgba(255, 135, 30, 0.16);
+}
+
+html[data-theme="overdrive"] .arena-overlay {
+    background: rgba(14, 9, 7, 0.35);
+}
+
+html[data-theme="overdrive"] .arena-footer kbd {
+    background: #4f3822;
+    border: 1px solid #77583a;
+}
+
+html[data-theme="overdrive"] .sky-hopper-frame {
+    border: 1px solid rgba(255, 172, 112, 0.52);
+    box-shadow: 0 0 30px rgba(255, 149, 46, 0.22);
+}
+
+html[data-theme="overdrive"] .sky-hopper-overlay {
+    background: rgba(28, 18, 14, 0.28);
+}
+
+html[data-theme="overdrive"] .content {
+    scrollbar-color: #ff871e rgba(192, 192, 192, 0.1);
+}
+
+html[data-theme="overdrive"] section {
+    box-shadow: 0 8px 32px rgba(255, 135, 30, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="overdrive"] section:hover {
+    box-shadow: 0 12px 40px rgba(255, 135, 30, 0.25), 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 135, 30, 0.3);
+}
+
+html[data-theme="overdrive"] .profile-picture {
+    border: 4px solid #ff871e;
+    box-shadow: 0 0 30px rgba(255, 135, 30, 0.6), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="overdrive"] .profile-picture:hover {
+    box-shadow: 0 0 40px rgba(255, 135, 30, 0.8), 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="overdrive"] .phone-glow {
+    background: radial-gradient(circle, rgba(255, 185, 126, 0.55) 0%, rgba(255, 185, 126, 0) 70%);
+}
+
+html[data-theme="overdrive"] .terminal-prompt {
+    color: #ffa04d;
+}
+
+html[data-theme="overdrive"] .terminal-typed {
+    border-right: 3px solid #ffa04d;
+}
+
+html[data-theme="overdrive"] .bio-badge {
+    background: linear-gradient(135deg, rgba(255, 135, 30, 0.2), rgba(255, 135, 30, 0.1));
+    border: 1px solid rgba(255, 135, 30, 0.4);
+}
+
+html[data-theme="overdrive"] .bio-badge:hover {
+    background: linear-gradient(135deg, rgba(255, 135, 30, 0.3), rgba(255, 135, 30, 0.15));
+    border-color: rgba(255, 135, 30, 0.6);
+    box-shadow: 0 4px 12px rgba(255, 135, 30, 0.3);
+}
+
+html[data-theme="overdrive"] .bio-main strong, html[data-theme="overdrive"] .intro-section p strong {
+    color: #ffb97e;
+}
+
+html[data-theme="overdrive"] .bio-cta {
+    background: rgba(255, 135, 30, 0.08);
+    border-left: 4px solid #ff871e;
+}
+
+html[data-theme="overdrive"] h1 {
+    background: linear-gradient(135deg, #ffffff 0%, #ffe9d6 45%, #ffa75d 100%);
+}
+
+html[data-theme="overdrive"] h2 {
+    color: #ffa04d;
+    border-bottom: 3px solid rgba(255, 135, 30, 0.4);
+    text-shadow: 0 2px 15px rgba(255, 135, 30, 0.4);
+}
+
+html[data-theme="overdrive"] section h2 {
+    border-bottom: 3px solid rgba(255, 135, 30, 0.4);
+}
+
+html[data-theme="overdrive"] .education-card::before {
+    background: linear-gradient(180deg, #ff871e, #ffa04d);
+}
+
+html[data-theme="overdrive"] .education-card:hover {
+    border-color: rgba(255, 135, 30, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 135, 30, 0.25);
+}
+
+html[data-theme="overdrive"] .degree-title {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .highlight-text strong {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .professional-experience-section .job {
+    border-left: 4px solid #ffa75d;
+}
+
+html[data-theme="overdrive"] .professional-experience-section .job:hover {
+    box-shadow: 0 4px 20px rgba(255, 135, 30, 0.15);
+}
+
+html[data-theme="overdrive"] .professional-experience-section .job-title {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .job-chip {
+    background: rgba(255, 135, 30, 0.1);
+    border: 1px solid rgba(255, 135, 30, 0.25);
+}
+
+html[data-theme="overdrive"] .job-chip:hover {
+    background: rgba(255, 135, 30, 0.2);
+    border-color: rgba(255, 135, 30, 0.4);
+}
+
+html[data-theme="overdrive"] a {
+    color: #ff871e;
+}
+
+html[data-theme="overdrive"] .content::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff871e, #8b4910);
+}
+
+html[data-theme="overdrive"] .content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ffa04d, #ff871e);
+}
+
+html[data-theme="overdrive"] ul li strong {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .projects-section .project, html[data-theme="overdrive"] .additional-projects-section .project {
+    border-left: 4px solid #ff871e;
+}
+
+html[data-theme="overdrive"] .projects-section .project:hover, html[data-theme="overdrive"] .additional-projects-section .project:hover {
+    box-shadow: 0 4px 20px rgba(255, 135, 30, 0.2);
+}
+
+html[data-theme="overdrive"] .projects-section .project-title, html[data-theme="overdrive"] .additional-projects-section .project-title {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .glow-card::before {
+    background: linear-gradient(45deg, #f59342, #d18747, #ff5700, #d18747, #f59342);
+}
+
+html[data-theme="overdrive"] .cafe-portal-label {
+    color: #ffb97e;
+    border: 2px solid rgba(255, 185, 126, 0.5);
+}
+
+html[data-theme="overdrive"] .contact-info a:hover {
+    color: #ffa75d !important;
+    text-shadow: 0 0 10px rgba(255, 167, 93, 0.4);
+}
+
+@media (max-width: 768px) {
+  html[data-theme="overdrive"] .navbar.open {
+      background: linear-gradient(165deg, rgba(33, 22, 17, 0.98), rgba(15, 10, 8, 0.98));
+      border: 1px solid rgba(255, 135, 30, 0.32);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(255, 135, 30, 0.16);
+  }
+  html[data-theme="overdrive"] .navbar.open a:hover {
+      background: rgba(255, 135, 30, 0.16);
+  }
+  html[data-theme="overdrive"] .navbar.open a:active {
+      background: rgba(255, 135, 30, 0.22);
+  }
+}
+
+html[data-theme="overdrive"] .skill-category:hover {
+    border-color: rgba(255, 135, 30, 0.3);
+}
+
+html[data-theme="overdrive"] .skill-category-title {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .tag {
+    background: rgba(255, 135, 30, 0.15);
+    border: 1px solid rgba(255, 135, 30, 0.3);
+}
+
+html[data-theme="overdrive"] .tag:hover {
+    background: rgba(255, 135, 30, 0.25);
+    border-color: rgba(255, 135, 30, 0.5);
+    box-shadow: 0 4px 12px rgba(255, 135, 30, 0.3);
+}
+
+html[data-theme="overdrive"] .tag-highlight {
+    background: rgba(255, 135, 30, 0.25);
+    border-color: rgba(255, 135, 30, 0.5);
+}
+
+html[data-theme="overdrive"] .project-card::before {
+    background: linear-gradient(180deg, #ff871e, #ffa04d);
+}
+
+html[data-theme="overdrive"] .project-card:hover {
+    border-color: rgba(255, 135, 30, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 135, 30, 0.25);
+}
+
+html[data-theme="overdrive"] .project-card .project-title {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .tech-tag {
+    background: rgba(255, 135, 30, 0.1);
+    border: 1px solid rgba(255, 135, 30, 0.25);
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .tech-tag:hover {
+    background: rgba(255, 135, 30, 0.2);
+    border-color: rgba(255, 135, 30, 0.4);
+}
+
+html[data-theme="overdrive"] .project-link {
+    background: rgba(255, 135, 30, 0.12);
+    border: 1px solid rgba(255, 135, 30, 0.3);
+    color: #ffa75d !important;
+}
+
+html[data-theme="overdrive"] .project-link:hover {
+    background: rgba(255, 135, 30, 0.24);
+    border-color: rgba(255, 135, 30, 0.5);
+}
+
+html[data-theme="overdrive"] .job-description strong {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .leadership-card::before {
+    background: linear-gradient(180deg, #ff871e, #ffa04d);
+}
+
+html[data-theme="overdrive"] .leadership-card:hover {
+    border-color: rgba(255, 135, 30, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 135, 30, 0.25);
+}
+
+html[data-theme="overdrive"] .leadership-role {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .stat-number {
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .meow-bubble {
+    background: rgba(255, 135, 30, 0.9);
+    box-shadow: 0 4px 16px rgba(255, 135, 30, 0.3);
+}
+
+html[data-theme="overdrive"] .meow-bubble::after {
+    border-top-color: rgba(255, 135, 30, 0.9);
+}
+
+html[data-theme="overdrive"] .fm-player {
+    background: linear-gradient(180deg, #94501f 0%, #783f16 55%, #3f2920 100%);
+}
+
+html[data-theme="overdrive"] .fm-disc img {
+    border: 2px solid #1c1310;
+}
+
+html[data-theme="overdrive"] .fm-title {
+    color: #fbf0e8;
+}
+
+html[data-theme="overdrive"] .fm-btn {
+    background: #211916;
+}
+
+html[data-theme="overdrive"] .fm-btn:hover {
+    background: #30241f;
+}
+
+html[data-theme="overdrive"] .chatbot-toggle {
+    background: linear-gradient(135deg, #ff871e, #8b4910);
+    box-shadow: 0 4px 20px rgba(255, 135, 30, 0.45);
+}
+
+html[data-theme="overdrive"] .chatbot-toggle:hover {
+    box-shadow: 0 6px 28px rgba(255, 135, 30, 0.6);
+}
+
+html[data-theme="overdrive"] .chatbot-window {
+    border: 1px solid rgba(255, 135, 30, 0.35);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 135, 30, 0.15);
+}
+
+html[data-theme="overdrive"] .chatbot-header {
+    background: linear-gradient(135deg, #ff871e, #8b4910);
+}
+
+html[data-theme="overdrive"] .chatbot-messages {
+    scrollbar-color: #ff871e #222;
+}
+
+html[data-theme="overdrive"] .chat-msg.bot {
+    background: rgba(255, 135, 30, 0.15);
+    border: 1px solid rgba(255, 135, 30, 0.25);
+}
+
+html[data-theme="overdrive"] .suggestion-btn {
+    background: rgba(255, 135, 30, 0.12);
+    border: 1px solid rgba(255, 135, 30, 0.3);
+    color: #ffa75d;
+}
+
+html[data-theme="overdrive"] .suggestion-btn:hover {
+    background: rgba(255, 135, 30, 0.25);
+}
+
+html[data-theme="overdrive"] .chatbot-input-area input:focus {
+    border-color: rgba(255, 135, 30, 0.5);
+}
+
+html[data-theme="overdrive"] .chatbot-input-area button {
+    background: linear-gradient(135deg, #ff871e, #8b4910);
+}
+
+/* ==========================================================================
+   Overdrive: hand-tuned extras (glow, circuit backdrop, controls)
+   ========================================================================== */
+
+html[data-theme="overdrive"] {
+    --od-orange: #ff7a1a;
+    --od-amber: #ffb347;
+    --od-ember: #ff4d00;
+    --od-ink: #140700;
+    --od-glow: 0 0 6px rgba(255, 122, 26, 0.75), 0 0 18px rgba(255, 122, 26, 0.4);
+}
+
+html[data-theme="overdrive"] body {
+    background: #050302;
+}
+
+html[data-theme="overdrive"] ::selection {
+    background: rgba(255, 122, 26, 0.45);
+    color: #fff;
+}
+
+/* original circuit-trace geometry behind everything */
+html[data-theme="overdrive"] body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 50% 115%, rgba(255, 77, 0, 0.28), transparent 60%),
+        radial-gradient(ellipse at 50% -15%, rgba(255, 122, 26, 0.14), transparent 55%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23ff7a1a' stroke-width='1.4' stroke-opacity='0.32' stroke-linecap='square'%3E%3Cpath d='M0 40H60L80 60V110L100 130H160'/%3E%3Cpath d='M220 40H190L170 20V0'/%3E%3Cpath d='M110 0V30L130 50H170'/%3E%3Cpath d='M0 170H40L60 150H90L110 170V220'/%3E%3Cpath d='M160 130L180 150V190L200 210H220'/%3E%3Cpath d='M140 220V200L120 180'/%3E%3Cpolygon points='160,80 178,90 178,110 160,120 142,110 142,90'/%3E%3Cpath d='M30 80L45 95L30 110L15 95Z'/%3E%3C/g%3E%3Cg fill='%23ffb347' fill-opacity='0.6'%3E%3Ccircle cx='160' cy='130' r='3'/%3E%3Ccircle cx='170' cy='50' r='3'/%3E%3Ccircle cx='90' cy='150' r='2.5'/%3E%3Ccircle cx='120' cy='180' r='2.5'/%3E%3Ccircle cx='60' cy='40' r='2.5'/%3E%3Ccircle cx='160' cy='100' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: auto, auto, 220px 220px;
+    animation: od-breathe 6s ease-in-out infinite;
+}
+
+@keyframes od-breathe {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+html[data-theme="overdrive"] .content {
+    background: rgba(6, 3, 1, 0.86);
+    box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.32), 0 0 48px rgba(255, 77, 0, 0.16);
+}
+
+/* navbar: black glass with an orange edge so white text stays readable */
+html[data-theme="overdrive"] .navbar {
+    background: linear-gradient(135deg, rgba(22, 10, 3, 0.94), rgba(8, 4, 2, 0.94));
+    border: 1px solid rgba(255, 122, 26, 0.55);
+    box-shadow: 0 0 24px rgba(255, 90, 0, 0.35), inset 0 0 18px rgba(255, 122, 26, 0.08);
+}
+
+html[data-theme="overdrive"] .navbar a:hover {
+    background: rgba(255, 122, 26, 0.16);
+    color: var(--od-amber);
+    text-shadow: var(--od-glow);
+}
+
+html[data-theme="overdrive"] .navbar.open {
+    background: linear-gradient(160deg, rgba(22, 10, 3, 0.98), rgba(6, 3, 1, 0.98));
+}
+
+html[data-theme="overdrive"] .hamburger span {
+    background: var(--od-amber);
+}
+
+/* headings glow like a lit filament */
+html[data-theme="overdrive"] h1 {
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #ffe7d1;
+    color: #ffe7d1;
+    text-shadow: 0 0 8px rgba(255, 122, 26, 0.9), 0 0 24px rgba(255, 77, 0, 0.55), 0 0 2px #fff;
+}
+
+html[data-theme="overdrive"] h2 {
+    color: var(--od-amber);
+    text-shadow: var(--od-glow);
+}
+
+html[data-theme="overdrive"] .terminal-prompt,
+html[data-theme="overdrive"] .terminal-typed {
+    color: var(--od-orange);
+    text-shadow: 0 0 8px rgba(255, 122, 26, 0.7);
+}
+
+/* sections become HUD panels with glowing corner brackets */
+html[data-theme="overdrive"] section {
+    border-color: rgba(255, 122, 26, 0.16);
+    background:
+        linear-gradient(var(--od-orange), var(--od-orange)) top left / 22px 2px no-repeat,
+        linear-gradient(var(--od-orange), var(--od-orange)) top left / 2px 22px no-repeat,
+        linear-gradient(var(--od-orange), var(--od-orange)) bottom right / 22px 2px no-repeat,
+        linear-gradient(var(--od-orange), var(--od-orange)) bottom right / 2px 22px no-repeat,
+        linear-gradient(135deg, rgba(255, 140, 60, 0.07), rgba(255, 255, 255, 0.03));
+}
+
+html[data-theme="overdrive"] section:hover {
+    border-color: rgba(255, 122, 26, 0.38);
+    box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.22), 0 0 34px rgba(255, 90, 0, 0.22);
+}
+
+/* contact buttons: black core, orange rim */
+html[data-theme="overdrive"] .btn-linkedin,
+html[data-theme="overdrive"] .btn-github {
+    background: linear-gradient(135deg, #160a03, #0a0502);
+    border: 1px solid rgba(255, 122, 26, 0.6);
+    box-shadow: inset 0 0 12px rgba(255, 122, 26, 0.14);
+    color: #fff;
+}
+
+html[data-theme="overdrive"] .btn-resume {
+    background: linear-gradient(135deg, #ff8a2a, var(--od-ember));
+    color: var(--od-ink);
+    box-shadow: 0 0 18px rgba(255, 90, 0, 0.45);
+}
+
+html[data-theme="overdrive"] .btn:hover {
+    box-shadow: 0 0 22px rgba(255, 122, 26, 0.55);
+}
+
+html[data-theme="overdrive"] .profile-picture {
+    animation: od-rim 3.2s ease-in-out infinite;
+}
+
+@keyframes od-rim {
+    0%, 100% { box-shadow: 0 0 18px rgba(255, 122, 26, 0.55), 0 8px 20px rgba(0, 0, 0, 0.4); }
+    50% { box-shadow: 0 0 36px rgba(255, 122, 26, 0.9), 0 8px 20px rgba(0, 0, 0, 0.4); }
+}
+
+html[data-theme="overdrive"] .tag-highlight,
+html[data-theme="overdrive"] .stat-number {
+    text-shadow: 0 0 8px rgba(255, 122, 26, 0.55);
+}
+
+html[data-theme="overdrive"] .badge-row img {
+    transition: filter 0.2s ease;
+}
+
+html[data-theme="overdrive"] .badge-row a:hover img {
+    filter: drop-shadow(0 0 6px rgba(255, 122, 26, 0.8));
+}
+
+html[data-theme="overdrive"] .project-link-icon {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(2390%) hue-rotate(351deg) brightness(101%) contrast(102%);
+}
+
+/* music player accents (its mint highlights aren't blue, so set them here) */
+html[data-theme="overdrive"] .fm-player {
+    background: linear-gradient(180deg, #3a1a08 0%, #241005 55%, #140800 100%);
+    border-color: rgba(255, 122, 26, 0.55);
+    box-shadow: 0 0 22px rgba(255, 90, 0, 0.35), inset 0 1px 0 rgba(255, 179, 71, 0.15);
+}
+
+html[data-theme="overdrive"] .fm-title b {
+    color: var(--od-amber);
+}
+
+html[data-theme="overdrive"] .fm-disc {
+    background: conic-gradient(var(--od-orange) calc(var(--fm-progress) * 1turn), rgba(255, 255, 255, 0.16) 0);
+}
+
+html[data-theme="overdrive"] .fm-player.loading .fm-disc::after {
+    border-top-color: var(--od-orange);
+}
+
+html[data-theme="overdrive"] .fm-btn {
+    background: #1a0c04;
+    box-shadow: inset 0 0 0 1.5px rgba(255, 179, 71, 0.9);
+}
+
+html[data-theme="overdrive"] .fm-btn:focus-visible,
+html[data-theme="overdrive"] .fm-disc:focus-visible,
+html[data-theme="overdrive"] .fm-collapse:focus-visible {
+    outline-color: var(--od-orange);
+}
+
+/* custom cursor in orange */
+html[data-theme="overdrive"] body,
+html[data-theme="overdrive"] * {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 3 L3 17 L8 12 L11 18 L13 17 L10 11 L17 11 Z" fill="%23FFFFFF" stroke="%23000000" stroke-width="1.5"/><path d="M3 3 L3 17 L8 12 L11 18 L13 17 L10 11 L17 11 Z" fill="%23FF7A1A" fill-opacity="0.7"/></svg>') 0 0, auto;
+}
+
+html[data-theme="overdrive"] a,
+html[data-theme="overdrive"] button,
+html[data-theme="overdrive"] .btn,
+html[data-theme="overdrive"] .navbar a {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 4 L4 20 L10 14 L13 21 L16 20 L13 13 L21 13 Z" fill="%23FFFFFF" stroke="%23000000" stroke-width="2"/><path d="M4 4 L4 20 L10 14 L13 21 L16 20 L13 13 L21 13 Z" fill="%23FF7A1A"/><circle cx="14" cy="14" r="1.5" fill="%23FFFFFF"/></svg>') 0 0, pointer !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html[data-theme="overdrive"] body::before,
+    html[data-theme="overdrive"] .profile-picture {
+        animation: none;
+    }
+}
+
+/* ==========================================================================
+   Theme switch (visible in both themes) and the power-up wave
+   ========================================================================== */
+
+.theme-switch {
+    position: fixed;
+    right: 88px;
+    bottom: 27px;
+    z-index: 11;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7ec4ff;
+    background: radial-gradient(circle at 50% 40%, #12202f, #05080d);
+    box-shadow: 0 0 0 1.5px rgba(126, 196, 255, 0.6), 0 4px 16px rgba(30, 144, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.theme-switch svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-switch::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0 70%, rgba(126, 196, 255, 0.9) 85%, transparent 100%);
+    -webkit-mask: radial-gradient(circle, transparent 60%, #000 62%);
+    mask: radial-gradient(circle, transparent 60%, #000 62%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.theme-switch:hover {
+    transform: scale(1.08);
+}
+
+.theme-switch:hover::before {
+    opacity: 1;
+    animation: od-spin 1.6s linear infinite;
+}
+
+.theme-switch:active {
+    transform: scale(0.92);
+}
+
+.theme-switch:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.theme-switch-tip {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    padding: 5px 10px;
+    font-family: 'Consolas', 'SFMono-Regular', 'Fira Code', 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    color: currentColor;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.theme-switch:hover .theme-switch-tip,
+.theme-switch:focus-visible .theme-switch-tip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+html[data-theme="overdrive"] .theme-switch {
+    color: var(--od-orange);
+    background: radial-gradient(circle at 50% 40%, #2a1204, #070302);
+    box-shadow: 0 0 0 1.5px rgba(255, 122, 26, 0.85), 0 0 22px rgba(255, 90, 0, 0.55);
+}
+
+html[data-theme="overdrive"] .theme-switch svg {
+    transform: rotate(180deg);
+    filter: drop-shadow(0 0 4px rgba(255, 122, 26, 0.9));
+}
+
+html[data-theme="overdrive"] .theme-switch::before {
+    opacity: 1;
+    background: conic-gradient(from 0deg, transparent 0 70%, rgba(255, 179, 71, 0.95) 85%, transparent 100%);
+    animation: od-spin 2.4s linear infinite;
+}
+
+@keyframes od-spin {
+    to { transform: rotate(360deg); }
+}
+
+.od-wave {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0;
+    --wave-color: 255, 122, 26;
+    background:
+        radial-gradient(circle at var(--x, 100%) var(--y, 100%),
+            transparent 0, rgba(var(--wave-color), 0.0) 20%, rgba(var(--wave-color), 0.55) 24%, rgba(var(--wave-color), 0.12) 30%, transparent 40%);
+}
+
+.od-wave.off {
+    --wave-color: 30, 144, 255;
+}
+
+.od-wave.go {
+    animation: od-wave 0.85s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+
+@keyframes od-wave {
+    0% { opacity: 1; clip-path: circle(0 at var(--x, 100%) var(--y, 100%)); }
+    70% { opacity: 1; }
+    100% { opacity: 0; clip-path: circle(150% at var(--x, 100%) var(--y, 100%)); }
+}
+
+@media (max-width: 768px) {
+    .theme-switch {
+        right: 74px;
+        bottom: 18px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .theme-switch-tip {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-switch:hover::before,
+    html[data-theme="overdrive"] .theme-switch::before,
+    .od-wave.go {
+        animation: none;
+    }
+}

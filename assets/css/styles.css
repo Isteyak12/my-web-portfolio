@@ -355,7 +355,7 @@ header {
 
 @keyframes terminal-caret {
     from, to { border-color: transparent; }
-    50% { border-color: #4da6ff; }
+    50% { border-color: currentColor; }
 }
 
 @media (prefers-reduced-motion: reduce) {

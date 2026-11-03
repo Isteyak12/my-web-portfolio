@@ -307,26 +307,6 @@ html[data-theme="overdrive"] .meow-bubble::after {
     border-top-color: rgba(255, 135, 30, 0.9);
 }
 
-html[data-theme="overdrive"] .fm-player {
-    background: linear-gradient(180deg, #94501f 0%, #783f16 55%, #3f2920 100%);
-}
-
-html[data-theme="overdrive"] .fm-disc img {
-    border: 2px solid #1c1310;
-}
-
-html[data-theme="overdrive"] .fm-title {
-    color: #fbf0e8;
-}
-
-html[data-theme="overdrive"] .fm-btn {
-    background: #211916;
-}
-
-html[data-theme="overdrive"] .fm-btn:hover {
-    background: #30241f;
-}
-
 html[data-theme="overdrive"] .chatbot-toggle {
     background: linear-gradient(135deg, #ff871e, #8b4910);
     box-shadow: 0 4px 20px rgba(255, 135, 30, 0.45);
@@ -463,12 +443,13 @@ html[data-theme="overdrive"] .terminal-typed {
 /* sections become HUD panels with glowing corner brackets */
 html[data-theme="overdrive"] section {
     border-color: rgba(255, 122, 26, 0.16);
-    background:
-        linear-gradient(var(--od-orange), var(--od-orange)) top left / 22px 2px no-repeat,
-        linear-gradient(var(--od-orange), var(--od-orange)) top left / 2px 22px no-repeat,
-        linear-gradient(var(--od-orange), var(--od-orange)) bottom right / 22px 2px no-repeat,
-        linear-gradient(var(--od-orange), var(--od-orange)) bottom right / 2px 22px no-repeat,
-        linear-gradient(135deg, rgba(255, 140, 60, 0.07), rgba(255, 255, 255, 0.03));
+    background: linear-gradient(135deg, rgba(255, 140, 60, 0.07), rgba(255, 255, 255, 0.03));
+}
+
+html[data-theme="overdrive"] section::before,
+html[data-theme="overdrive"] section::after {
+    border-color: var(--od-orange);
+    filter: drop-shadow(0 0 6px rgba(255, 122, 26, 0.85));
 }
 
 html[data-theme="overdrive"] section:hover {
@@ -559,33 +540,18 @@ html[data-theme="overdrive"] .drone-portal:focus-visible {
     box-shadow: 0 0 18px rgba(255, 122, 26, 0.45);
 }
 
-/* music player accents (its mint highlights aren't blue, so set them here) */
-html[data-theme="overdrive"] .fm-player {
-    background: linear-gradient(180deg, #3a1a08 0%, #241005 55%, #140800 100%);
-    border-color: rgba(255, 122, 26, 0.55);
-    box-shadow: 0 0 22px rgba(255, 90, 0, 0.35), inset 0 1px 0 rgba(255, 179, 71, 0.15);
+html[data-theme="overdrive"] .scroll-cue {
+    color: var(--od-orange);
+    text-shadow: 0 0 8px rgba(255, 122, 26, 0.75);
+    background: rgba(12, 5, 1, 0.75);
+    border-color: rgba(255, 122, 26, 0.45);
 }
 
-html[data-theme="overdrive"] .fm-title b {
+html[data-theme="overdrive"] .scroll-cue:hover {
     color: var(--od-amber);
 }
 
-html[data-theme="overdrive"] .fm-disc {
-    background: conic-gradient(var(--od-orange) calc(var(--fm-progress) * 1turn), rgba(255, 255, 255, 0.16) 0);
-}
-
-html[data-theme="overdrive"] .fm-player.loading .fm-disc::after {
-    border-top-color: var(--od-orange);
-}
-
-html[data-theme="overdrive"] .fm-btn {
-    background: #1a0c04;
-    box-shadow: inset 0 0 0 1.5px rgba(255, 179, 71, 0.9);
-}
-
-html[data-theme="overdrive"] .fm-btn:focus-visible,
-html[data-theme="overdrive"] .fm-disc:focus-visible,
-html[data-theme="overdrive"] .fm-collapse:focus-visible {
+html[data-theme="overdrive"] .scroll-cue:focus-visible {
     outline-color: var(--od-orange);
 }
 

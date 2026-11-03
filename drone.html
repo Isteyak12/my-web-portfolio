@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/drone.css?v=1">
+    <link rel="stylesheet" href="assets/css/drone.css?v=2">
     <script type="importmap">
         {
             "imports": {
@@ -66,6 +66,33 @@
         <button type="button" class="cta" id="retry-btn">Fly again</button>
     </section>
 
+    <!-- Vertical music player -->
+    <div class="fm-player" id="fm-player" data-video="RX7fZ5I709Y" data-start="21">
+        <button type="button" class="fm-disc" id="fm-disc" aria-label="Play music">
+            <img src="https://i.ytimg.com/vi/RX7fZ5I709Y/hqdefault.jpg" alt="" loading="lazy">
+        </button>
+        <div class="fm-body">
+            <div class="fm-title" title="Vanze – Forever (feat. Brenton Mattheus) · NCS">
+                <span class="fm-marquee">
+                    <span><b>ISTEYAK.FM</b> · Vanze – Forever (feat. Brenton Mattheus) · NCS ·&nbsp;</span>
+                    <span aria-hidden="true"><b>ISTEYAK.FM</b> · Vanze – Forever (feat. Brenton Mattheus) · NCS ·&nbsp;</span>
+                </span>
+            </div>
+            <button type="button" class="fm-btn" id="fm-play" aria-label="Play music">
+                <svg class="fm-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                <svg class="fm-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.5v13M15.5 5.5v13" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </button>
+            <button type="button" class="fm-btn" id="fm-mute" aria-label="Mute">
+                <svg class="fm-icon-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 9a4 4 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <svg class="fm-icon-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15.5 9.5l5 5M20.5 9.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+        <button type="button" class="fm-collapse" id="fm-collapse" aria-label="Collapse music player" aria-expanded="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="fm-yt" aria-hidden="true"><div id="fm-yt"></div></div>
+    </div>
+
     <div class="fallback" id="fallback" hidden>
         <p>Your browser couldn't start 3D graphics, so the flight can't load.</p>
         <a href="index.html">Back to portfolio</a>
@@ -78,7 +105,8 @@
         </div>
     </noscript>
 
-    <script type="module" src="assets/js/drone3d.js?v=4"></script>
+    <script src="assets/js/music-player.js?v=2"></script>
+    <script type="module" src="assets/js/drone3d.js?v=16"></script>
 </body>
 
 </html>

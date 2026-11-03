@@ -3,7 +3,9 @@
     if (!root) return;
 
     const VIDEO_ID = root.dataset.video;
-    const VOLUME = 20;
+    // where the vocals come in (seconds); also where the loop restarts
+    const START_AT = Number(root.dataset.start) || 0;
+    const VOLUME = 12;
     const playBtn = document.getElementById('fm-play');
     const muteBtn = document.getElementById('fm-mute');
     const disc = document.getElementById('fm-disc');
@@ -11,7 +13,7 @@
 
     let player = null;
     let ready = false;
-    let wantPlay = false;
+    let wantPlay = true;
     let muted = false;
     let progressTimer = null;
 
@@ -37,11 +39,10 @@
             width: 200,
             height: 200,
             playerVars: {
-                autoplay: 0,
+                autoplay: 1,
+                start: START_AT,
                 controls: 0,
                 disablekb: 1,
-                loop: 1,
-                playlist: VIDEO_ID,
                 playsinline: 1,
                 rel: 0,
             },
@@ -53,6 +54,11 @@
                     if (wantPlay) player.playVideo();
                 },
                 onStateChange: (e) => {
+                    if (e.data === YT.PlayerState.ENDED) {
+                        player.seekTo(START_AT, true);
+                        player.playVideo();
+                        return;
+                    }
                     root.classList.toggle('loading', e.data === YT.PlayerState.BUFFERING);
                     setPlaying(e.data === YT.PlayerState.PLAYING);
                 },
@@ -82,7 +88,7 @@
     }
 
     function togglePlay() {
-        wantPlay = !wantPlay;
+        wantPlay = !root.classList.contains('playing');
         root.classList.remove('fm-error');
         if (!player) {
             if (wantPlay) {
@@ -123,6 +129,19 @@
         setCollapsed(collapsed);
         try { localStorage.setItem('fm-collapsed', collapsed ? '1' : '0'); } catch (_) { /* storage unavailable */ }
     });
+
+    // Default to playing. Browsers block sound until the visitor interacts with the page,
+    // so if the autoplay attempt is refused, start on their first click, tap or key press.
+    function startOnGesture(e) {
+        if (root.contains(e.target)) return;
+        document.removeEventListener('pointerdown', startOnGesture, true);
+        document.removeEventListener('keydown', startOnGesture, true);
+        if (wantPlay && ready && !root.classList.contains('playing')) player.playVideo();
+    }
+    document.addEventListener('pointerdown', startOnGesture, true);
+    document.addEventListener('keydown', startOnGesture, true);
+    root.classList.add('loading');
+    loadApi();
 
     let saved = null;
     try { saved = localStorage.getItem('fm-collapsed'); } catch (_) { /* storage unavailable */ }

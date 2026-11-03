@@ -521,6 +521,44 @@ html[data-theme="overdrive"] .project-link-icon {
     filter: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(2390%) hue-rotate(351deg) brightness(101%) contrast(102%);
 }
 
+html[data-theme="overdrive"] .bio-toggle {
+    color: var(--od-amber);
+    background: rgba(255, 122, 26, 0.1);
+    border-color: rgba(255, 122, 26, 0.5);
+}
+
+html[data-theme="overdrive"] .bio-toggle:hover {
+    color: #fff;
+    background: rgba(255, 122, 26, 0.22);
+    border-color: var(--od-orange);
+    box-shadow: 0 0 14px rgba(255, 122, 26, 0.35);
+}
+
+html[data-theme="overdrive"] .bio-toggle:focus-visible {
+    outline-color: var(--od-orange);
+}
+
+html[data-theme="overdrive"] .job-points li::before {
+    background: linear-gradient(135deg, #ffd2a8, var(--od-orange));
+    box-shadow: 0 0 9px rgba(255, 122, 26, 0.85);
+}
+
+html[data-theme="overdrive"] .job-points li:not(:last-child)::after {
+    background: linear-gradient(to bottom, rgba(255, 150, 70, 0.45), rgba(255, 150, 70, 0.08));
+}
+
+html[data-theme="overdrive"] .drone-portal {
+    color: var(--od-amber);
+    border-color: rgba(255, 179, 71, 0.5);
+}
+
+html[data-theme="overdrive"] .drone-portal:hover,
+html[data-theme="overdrive"] .drone-portal:focus-visible {
+    color: #fff;
+    border-color: var(--od-orange);
+    box-shadow: 0 0 18px rgba(255, 122, 26, 0.45);
+}
+
 /* music player accents (its mint highlights aren't blue, so set them here) */
 html[data-theme="overdrive"] .fm-player {
     background: linear-gradient(180deg, #3a1a08 0%, #241005 55%, #140800 100%);

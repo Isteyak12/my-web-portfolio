@@ -421,6 +421,63 @@ header {
     font-weight: 500;
 }
 
+.bio-body {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bio-body.is-collapsed {
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
+.bio-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0 0;
+    padding: 8px 16px;
+    font: 600 0.92em var(--font-body);
+    color: #7ec4ff;
+    background: rgba(30, 144, 255, 0.1);
+    border: 1px solid rgba(126, 196, 255, 0.4);
+    border-radius: 999px;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.bio-toggle[hidden] {
+    display: none;
+}
+
+.bio-toggle:hover {
+    color: #fff;
+    background: rgba(30, 144, 255, 0.22);
+    border-color: rgba(126, 196, 255, 0.75);
+}
+
+.bio-toggle:focus-visible {
+    outline: 2px solid #7ec4ff;
+    outline-offset: 3px;
+}
+
+.bio-toggle-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.bio-toggle[aria-expanded="true"] .bio-toggle-icon {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bio-body,
+    .bio-toggle-icon {
+        transition: none;
+    }
+}
+
 .bio-cta {
     background: rgba(30, 144, 255, 0.08);
     padding: 16px 20px;
@@ -873,6 +930,34 @@ ul li strong {
     outline: none;
 }
 
+.drone-portal {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0 0 10px;
+    padding: 10px 18px;
+    font-family: 'Consolas', 'SFMono-Regular', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95em;
+    color: #7ee8c8;
+    text-decoration: none;
+    border: 2px solid rgba(126, 232, 200, 0.5);
+    border-radius: 10px;
+    transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drone-portal svg {
+    width: 20px;
+    height: 20px;
+}
+
+.drone-portal:hover,
+.drone-portal:focus-visible {
+    color: #fff;
+    border-color: #7ee8c8;
+    box-shadow: 0 0 18px rgba(126, 232, 200, 0.35);
+    outline: none;
+}
+
 #model-container {
     width: 100%;
     height: 340px;
@@ -1317,6 +1402,48 @@ section {
     line-height: 1.7;
     margin-bottom: 8px !important;
     font-size: 0.98em;
+}
+
+.job-points {
+    list-style: none;
+    margin: 12px 0 8px;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.job-points li,
+.job-points li:hover {
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 26px;
+    font-size: inherit;
+    line-height: 1.7;
+}
+
+/* glowing diamond bullet */
+.job-points li::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0.62em;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, #a9d8ff, #1e90ff);
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.75);
+}
+
+/* faint rail linking one bullet to the next */
+.job-points li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 8.5px;
+    top: calc(0.62em + 12px);
+    bottom: calc(-0.62em - 8px);
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(126, 196, 255, 0.45), rgba(126, 196, 255, 0.08));
 }
 
 .job-description strong {

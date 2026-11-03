@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Flight</title>
+    <meta name="description" content="Fly a 3D quadcopter through glowing portals above a seaside corniche at night. A mini game on Isteyak's portfolio.">
+    <link rel="icon" href="assets/images/favicon2.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/drone.css?v=1">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="scene" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <a href="index.html" class="chip">&larr; portfolio</a>
+        <a href="cafe.html" class="chip">pixel café</a>
+        <button type="button" class="chip" id="sound-btn" aria-pressed="true">sound on</button>
+    </header>
+
+    <div class="hud" id="hud" hidden>
+        <div class="hud-score">
+            <span class="hud-label">Score</span>
+            <span class="hud-value" id="hud-score">0</span>
+            <span class="hud-combo" id="hud-combo"></span>
+        </div>
+        <div class="hud-shields" id="hud-shields" role="img" aria-label="3 shields left">
+            <span class="hud-label">Shields</span>
+            <span class="cells"><i></i><i></i><i></i></span>
+        </div>
+        <div class="hud-speed"><span id="hud-speed">0</span> km/h</div>
+    </div>
+
+    <div id="popups" aria-live="polite"></div>
+
+    <section class="panel" id="start-panel" aria-labelledby="start-title">
+        <p class="kicker">Night flight trial</p>
+        <h1 id="start-title">Portal Flight</h1>
+        <p class="lede">Thread a quadcopter through glowing portals along a seaside corniche at night: palm-lined promenade, light-streaked traffic and a city skyline. Miss three and the run is over.</p>
+        <ul class="controls">
+            <li><kbd>Mouse</kbd> or <kbd>drag</kbd> to steer</li>
+            <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys work too</li>
+            <li>Dead-centre is a <strong>Perfect</strong> bonus &middot; gold portals are +3</li>
+        </ul>
+        <button type="button" class="cta" id="start-btn">Take off</button>
+        <p class="best">Best score: <span id="best-start">0</span></p>
+    </section>
+
+    <section class="panel" id="over-panel" aria-labelledby="over-title" hidden>
+        <p class="kicker">Flight ended</p>
+        <h1 id="over-title">Signal lost</h1>
+        <p class="final">Score <span id="final-score">0</span></p>
+        <p class="best" id="over-best"></p>
+        <button type="button" class="cta" id="retry-btn">Fly again</button>
+    </section>
+
+    <div class="fallback" id="fallback" hidden>
+        <p>Your browser couldn't start 3D graphics, so the flight can't load.</p>
+        <a href="index.html">Back to portfolio</a>
+    </div>
+
+    <noscript>
+        <div class="fallback">
+            <p>Portal Flight needs JavaScript.</p>
+            <a href="index.html">Back to portfolio</a>
+        </div>
+    </noscript>
+
+    <script type="module" src="assets/js/drone3d.js?v=4"></script>
+</body>
+
+</html>

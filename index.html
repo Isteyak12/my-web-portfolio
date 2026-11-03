@@ -89,15 +89,21 @@
                 <div class="bio-badge">🧠 Siamese U-Net Specialist</div>
                 <div class="bio-badge">🤖 Isaac Sim Contributor</div>
             </div>
-            <p class="bio-main">
-                I turn pixels into decisions — training deep learning models that read satellite imagery, catch microscopic defects on live battery production lines, and, most recently, drive robots in simulation. I previously completed geospatial research at the <strong>GeoVision Lab, University of Windsor</strong>, training a <strong>Siamese Attention U-Net model</strong> for change detection on satellite image pairs, and currently work as a Vision System Inspection Technician, running high-precision defect detection on live battery manufacturing lines.
-            </p>
-            <p>
-                My toolkit bridges <strong>computer vision research</strong> and <strong>production-ready software</strong> — shipping vision models (YOLOv8, YOLO11, MediaPipe, RetinaFace) inside full-stack systems built with <strong>React, Next.js, and Node.js</strong>, so intelligent systems don't just work in a notebook, they work in production.
-            </p>
-            <p>
-                Lately I've been pointing that same toolkit at robotics: deploying <strong>NVIDIA Isaac Sim</strong> on a cloud RTX 4090, scripting pick-and-place tasks with <strong>RMPflow motion planning</strong>, and landing a merged pull request on the open-source <strong>isaacsim-mcp-server</strong> project. From winning <strong>3rd place at WinHacks 2024</strong> to competing at <strong>HackTheNorth 2025</strong>, I like building things that move — whether that's a satellite-scale model, a browser, or a robot arm.
-            </p>
+            <div class="bio-body" id="bio-body">
+                <p class="bio-main">
+                    I turn pixels into decisions — training deep learning models that read satellite imagery, catch microscopic defects on live battery production lines, and, most recently, drive robots in simulation. I previously completed geospatial research at the <strong>GeoVision Lab, University of Windsor</strong>, training a <strong>Siamese Attention U-Net model</strong> for change detection on satellite image pairs, and currently work as a Vision System Inspection Technician, running high-precision defect detection on live battery manufacturing lines.
+                </p>
+                <p>
+                    My toolkit bridges <strong>computer vision research</strong> and <strong>production-ready software</strong> — shipping vision models (YOLOv8, YOLO11, MediaPipe, RetinaFace) inside full-stack systems built with <strong>React, Next.js, and Node.js</strong>, so intelligent systems don't just work in a notebook, they work in production.
+                </p>
+                <p>
+                    Lately I've been pointing that same toolkit at robotics: deploying <strong>NVIDIA Isaac Sim</strong> on a cloud RTX 4090, scripting pick-and-place tasks with <strong>RMPflow motion planning</strong>, and landing a merged pull request on the open-source <strong>isaacsim-mcp-server</strong> project. From winning <strong>3rd place at WinHacks 2024</strong> to competing at <strong>HackTheNorth 2025</strong>, I like building things that move — whether that's a satellite-scale model, a browser, or a robot arm.
+                </p>
+            </div>
+            <button type="button" class="bio-toggle" id="bio-toggle" aria-expanded="true" aria-controls="bio-body" hidden>
+                <span class="bio-toggle-label">Read more</span>
+                <svg class="bio-toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
             <p class="bio-cta">
                 💡 <em>Currently chasing: sim-to-real robotics, edge-AI inference, and making machines see — and move — smarter.</em>
             </p>
@@ -163,15 +169,13 @@
                         <span class="job-chip">📅 February 2025 - March 2026</span>
                     </div>
                 </div>
-                <p class="job-description">
-                    Developed a patching system for creating splits of any satellite image, tested using <strong>QGIS render
-                    tech</strong>, and built a web scraping system to extract data in a structured way from database websites.
-                    Trained a <strong>Siamese Attention-UNet model</strong> using TensorFlow/Keras on geospatial image pairs to
-                    detect visual similarity for change detection tasks, optimizing training under <strong>constrained GPU
-                    resources (NVIDIA GTX 1080)</strong> by tuning batch size, input resolution, and memory growth settings to
-                    avoid OOM errors — then scaled the full training run to an <strong>NVIDIA RTX 4080 (Ada Lovelace)</strong>,
-                    cutting training time to under an hour on heavy datasets.
-                </p>
+                <ul class="job-description job-points">
+                    <li>Developed a patching system for creating splits of any satellite image, tested using <strong>QGIS render tech</strong>.</li>
+                    <li>Built a web scraping system to extract data in a structured way from database websites.</li>
+                    <li>Trained a <strong>Siamese Attention-UNet model</strong> using TensorFlow/Keras on geospatial image pairs to detect visual similarity for change detection tasks.</li>
+                    <li>Optimized training under <strong>constrained GPU resources (NVIDIA GTX 1080)</strong> by tuning batch size, input resolution, and memory growth settings to avoid OOM errors.</li>
+                    <li>Scaled the full training run to an <strong>NVIDIA RTX 4080 (Ada Lovelace)</strong>, cutting training time to under an hour on heavy datasets.</li>
+                </ul>
                 <div class="job-tech-stack">
                     <span class="tech-tag">TensorFlow</span>
                     <span class="tech-tag">Keras</span>
@@ -189,12 +193,11 @@
                         <span class="job-chip">📅 October 2024 - December 2024</span>
                     </div>
                 </div>
-                <p class="job-description">
-                    Researched and evaluated frontal face detection techniques by integrating <strong>YOLOv8n with MTCNN</strong>
-                    and <strong>YOLO11 with RetinaFace</strong>, achieving improved detection accuracy and frame-level face
-                    counts across ML experiments. Conducted performance benchmarking and model comparison to assess
-                    inference speed, scalability, and detection reliability for computer vision applications.
-                </p>
+                <ul class="job-description job-points">
+                    <li>Researched and evaluated frontal face detection techniques by integrating <strong>YOLOv8n with MTCNN</strong> and <strong>YOLO11 with RetinaFace</strong>.</li>
+                    <li>Achieved improved detection accuracy and frame-level face counts across ML experiments.</li>
+                    <li>Conducted performance benchmarking and model comparison to assess inference speed, scalability, and detection reliability for computer vision applications.</li>
+                </ul>
                 <div class="job-tech-stack">
                     <span class="tech-tag">YOLOv8</span>
                     <span class="tech-tag">YOLO11</span>
@@ -212,11 +215,10 @@
                         <span class="job-chip">📅 August 2023 - December 2024</span>
                     </div>
                 </div>
-                <p class="job-description">
-                    Mentored <strong>200+ students</strong> in software engineering fundamentals including Data Structures 
-                    and Algorithms (DSA), problem-solving techniques, and best practices for writing secure, maintainable, 
-                    and performant code.
-                </p>
+                <ul class="job-description job-points">
+                    <li>Mentored <strong>200+ students</strong> in software engineering fundamentals, including Data Structures and Algorithms (DSA).</li>
+                    <li>Coached problem-solving techniques and best practices for writing secure, maintainable, and performant code.</li>
+                </ul>
                 <div class="job-tech-stack">
                     <span class="tech-tag">DSA</span>
                     <span class="tech-tag">Java</span>
@@ -739,6 +741,10 @@
                 <div id="model-container" aria-hidden="true"></div>
                 <span class="cafe-portal-label">step into the pixel café &rarr;</span>
             </a>
+            <a href="drone.html" class="drone-portal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.2 7.2l2.6 2.6M16.8 7.2l-2.6 2.6M7.2 16.8l2.6-2.6M16.8 16.8l-2.6-2.6" stroke="currentColor" stroke-width="1.6"/><rect x="9.5" y="9.5" width="5" height="5" rx="1.2" fill="currentColor"/></svg>
+                fly the 3D drone &rarr;
+            </a>
         </section>
     </div>
 
@@ -813,6 +819,7 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/music-player.js"></script>
     <script src="assets/js/theme-switch.js"></script>
+    <script src="assets/js/bio-toggle.js"></script>
     <script src="assets/js/stick-arena.js"></script>
     <script src="assets/js/sky-hopper.js"></script>
     <script type="module" src="assets/js/model.js"></script>

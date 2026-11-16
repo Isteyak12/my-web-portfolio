@@ -41,6 +41,7 @@
             <li><a href="#additional-projects"><span class="nav-icon">📁</span>Additional Projects</a></li>
             <li><a href="#leadership-experience"><span class="nav-icon">🌟</span>Leadership Experience</a></li>
             <li><a href="#stick-arena"><span class="nav-icon">🎮</span>Game</a></li>
+            <li><a href="#contact"><span class="nav-icon">✉️</span>Contact</a></li>
             <!-- <li><a href="#cards">Card Section</a></li> -->
         </ul>
     </nav>
@@ -745,6 +746,45 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.2 7.2l2.6 2.6M16.8 7.2l-2.6 2.6M7.2 16.8l2.6-2.6M16.8 16.8l-2.6-2.6" stroke="currentColor" stroke-width="1.6"/><rect x="9.5" y="9.5" width="5" height="5" rx="1.2" fill="currentColor"/></svg>
                 fly the 3D drone &rarr;
             </a>
+            <a href="/bat" class="fly-portal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 12.5 C8 9.5 5 9 2 10.5 C3.6 11.5 4 13 3.8 14.5 C5.4 13.6 6.6 14 7 15.6 C8 14.4 9 14.2 10 14.6 Z" fill="currentColor"/><path d="M14 12.5 C16 9.5 19 9 22 10.5 C20.4 11.5 20 13 20.2 14.5 C18.6 13.6 17.4 14 17 15.6 C16 14.4 15 14.2 14 14.6 Z" fill="currentColor"/><path d="M9.6 9.6 L10.2 6 L11.8 8.6 Z M14.4 9.6 L13.8 6 L12.2 8.6 Z" fill="currentColor"/><ellipse cx="12" cy="12.5" rx="3" ry="3.6" fill="currentColor"/></svg>
+                watch a bat solve code &rarr;
+            </a>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <p class="contact-lede">Have a role, a project, or just want to talk computer vision and robotics? Drop me a message and I'll get back to you.</p>
+            <div class="contact-grid">
+                <form class="contact-form" id="contact-form" data-endpoint="" novalidate>
+                        <div class="contact-row">
+                            <label class="contact-field">
+                                <span>Name</span>
+                                <input type="text" name="name" autocomplete="name" required maxlength="100">
+                            </label>
+                            <label class="contact-field">
+                                <span>Email</span>
+                                <input type="email" name="email" autocomplete="email" required maxlength="150">
+                            </label>
+                        </div>
+                        <label class="contact-field">
+                            <span>Message</span>
+                            <textarea name="message" rows="4" required maxlength="3000"></textarea>
+                        </label>
+                        <!-- honeypot: real visitors never see or fill this -->
+                        <input type="text" name="_gotcha" class="contact-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="contact-actions">
+                            <button type="submit" class="contact-send">Send message</button>
+                            <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+                <div class="contact-links">
+                    <a href="#" class="contact-link" id="contact-email-link"><span aria-hidden="true">✉️</span> Email me</a>
+                    <a href="https://www.linkedin.com/in/isteyak/" target="_blank" rel="noopener" class="contact-link"><span aria-hidden="true">💼</span> LinkedIn</a>
+                    <a href="https://github.com/isteyak12" target="_blank" rel="noopener" class="contact-link"><span aria-hidden="true">🐙</span> GitHub</a>
+                    <a href="isteyak_resume.pdf" target="_blank" rel="noopener" class="contact-link"><span aria-hidden="true">📄</span> Resume</a>
+                    <p class="contact-note">📍 Open to remote &amp; relocation</p>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -803,6 +843,7 @@
     <script src="assets/js/bio-toggle.js"></script>
     <script src="assets/js/scroll-cue.js"></script>
     <script src="assets/js/section-brackets.js"></script>
+    <script src="assets/js/contact-form.js"></script>
     <script src="assets/js/stick-arena.js"></script>
     <script src="assets/js/sky-hopper.js"></script>
     <script type="module" src="assets/js/model.js"></script>

@@ -555,6 +555,54 @@ html[data-theme="overdrive"] .scroll-cue:focus-visible {
     outline-color: var(--od-orange);
 }
 
+html[data-theme="overdrive"] .contact-field {
+    color: var(--od-amber);
+}
+
+html[data-theme="overdrive"] .contact-field input,
+html[data-theme="overdrive"] .contact-field textarea {
+    border-color: rgba(255, 122, 26, 0.3);
+}
+
+html[data-theme="overdrive"] .contact-field input:focus,
+html[data-theme="overdrive"] .contact-field textarea:focus {
+    border-color: var(--od-orange);
+    box-shadow: 0 0 0 3px rgba(255, 122, 26, 0.22);
+}
+
+html[data-theme="overdrive"] .contact-send {
+    color: var(--od-ink);
+    background: linear-gradient(135deg, #ffb347, var(--od-orange));
+    box-shadow: 0 6px 18px rgba(255, 122, 26, 0.4);
+}
+
+html[data-theme="overdrive"] .contact-send:focus-visible {
+    outline-color: var(--od-orange);
+}
+
+html[data-theme="overdrive"] .contact-link {
+    background: rgba(255, 122, 26, 0.08);
+    border-color: rgba(255, 122, 26, 0.25);
+}
+
+html[data-theme="overdrive"] .contact-link:hover,
+html[data-theme="overdrive"] .contact-link:focus-visible {
+    background: rgba(255, 122, 26, 0.18);
+    border-color: rgba(255, 122, 26, 0.6);
+}
+
+html[data-theme="overdrive"] .fly-portal {
+    color: var(--od-amber);
+    border-color: rgba(255, 179, 71, 0.5);
+}
+
+html[data-theme="overdrive"] .fly-portal:hover,
+html[data-theme="overdrive"] .fly-portal:focus-visible {
+    color: #fff;
+    border-color: var(--od-orange);
+    box-shadow: 0 0 18px rgba(255, 122, 26, 0.45);
+}
+
 /* custom cursor in orange */
 html[data-theme="overdrive"] body,
 html[data-theme="overdrive"] * {

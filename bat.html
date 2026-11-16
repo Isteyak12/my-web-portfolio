@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat Solves Code</title>
+    <meta name="description" content="Watch an animated bat read a classic interview problem, type a solution key by key, and run the tests. A demo on Isteyak's portfolio.">
+    <link rel="icon" href="assets/images/favicon2.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bat.css?v=1">
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="/" class="chip">&larr; portfolio</a>
+        <a href="/cafe" class="chip">pixel café</a>
+        <a href="/drone" class="chip">3D drone</a>
+    </header>
+
+    <main class="stage" id="stage">
+        <div class="intro">
+            <p class="kicker">Experiment 01</p>
+            <h1>A bat solves a coding problem</h1>
+            <p class="lede">It reads the problem, thinks it over, then swoops onto every key to type a solution and run the tests.</p>
+        </div>
+
+        <div class="layout">
+            <div class="col-left">
+                <section class="card problem" aria-labelledby="problem-title">
+                    <div class="card-head">
+                        <h2 id="problem-title">Pair Sum</h2>
+                        <span class="tag tag-easy">easy</span>
+                    </div>
+                    <p>Given a list of whole numbers <code>nums</code> and a number <code>target</code>, return the positions of the <strong>two</strong> numbers that add up to <code>target</code>.</p>
+                    <p>Exactly one valid pair exists, and you may not use the same position twice.</p>
+                    <div class="example">
+                        <span class="ex-label">Example</span>
+                        <code>nums = [2, 7, 11, 15], target = 9</code>
+                        <code>&rarr; [0, 1]</code>
+                    </div>
+                </section>
+
+                <section class="card brain" aria-labelledby="brain-title">
+                    <div class="card-head">
+                        <h2 id="brain-title">Bat brain activity</h2>
+                        <span class="brain-state" id="brain-state">idle</span>
+                    </div>
+                    <canvas id="brain-canvas" width="360" height="120" aria-hidden="true"></canvas>
+                    <p class="fine">Stylised visual, not a real neural recording.</p>
+                </section>
+            </div>
+
+            <div class="col-right">
+                <section class="card editor" aria-labelledby="editor-title">
+                    <div class="editor-bar">
+                        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <h2 id="editor-title">solution.py</h2>
+                        <button type="button" class="run-btn" id="run-btn" tabindex="-1" aria-hidden="true">&#9654; Run</button>
+                    </div>
+                    <pre class="code" id="code" aria-live="off"><code id="code-text"></code><span class="caret" aria-hidden="true"></span></pre>
+                </section>
+
+                <section class="card console" aria-labelledby="console-title">
+                    <h2 id="console-title">Tests</h2>
+                    <ol class="tests" id="tests" aria-live="polite"></ol>
+                    <p class="verdict" id="verdict" aria-live="polite"></p>
+                </section>
+            </div>
+        </div>
+
+        <div class="keyboard" id="keyboard" aria-hidden="true"></div>
+
+        <div class="controls">
+            <button type="button" class="btn" id="replay-btn" hidden>&#8635; Watch again</button>
+            <button type="button" class="btn btn-ghost" id="skip-btn">Skip to result</button>
+        </div>
+
+        <div class="fly" id="fly" aria-hidden="true">
+            <div class="fly-bubble" id="fly-bubble"></div>
+            <svg viewBox="0 0 100 100" class="fly-svg">
+                <path class="wing wing-l" d="M42 52 C34 40 20 38 8 44 C14 48 16 54 15 60 C21 56 26 58 28 64 C32 59 37 58 42 60 Z" fill="#6f6488" />
+                <path class="wing wing-r" d="M58 52 C66 40 80 38 92 44 C86 48 84 54 85 60 C79 56 74 58 72 64 C68 59 63 58 58 60 Z" fill="#6f6488" />
+                <path d="M39 40 L41 26 L48 36 Z" fill="#8a7fa6" />
+                <path d="M61 40 L59 26 L52 36 Z" fill="#8a7fa6" />
+                <ellipse cx="50" cy="52" rx="12" ry="14" fill="#8a7fa6" />
+                <ellipse cx="50" cy="56" rx="6.5" ry="7.5" fill="#b8aed0" />
+                <circle cx="45.5" cy="46" r="2.4" fill="#1d1828" />
+                <circle cx="54.5" cy="46" r="2.4" fill="#1d1828" />
+                <circle cx="46.2" cy="45.3" r="0.8" fill="#fff" />
+                <circle cx="55.2" cy="45.3" r="0.8" fill="#fff" />
+                <path d="M47.6 50.6 L48.6 53 L49.4 50.8 M50.6 50.8 L51.4 53 L52.4 50.6" fill="#fff" />
+            </svg>
+        </div>
+    </main>
+
+    <noscript>
+        <p class="noscript">This demo needs JavaScript. <a href="/">Back to portfolio</a></p>
+    </noscript>
+
+    <script src="assets/js/bat.js?v=1"></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2f9db2d2735f4aea80cba66786c808f4"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+
+</html>

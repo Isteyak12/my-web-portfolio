@@ -468,7 +468,7 @@ header > .intro-section {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.95);
     transition: all 0.3s ease;
-    cursor: default;
+    text-decoration: none;
 }
 
 .bio-badge:hover {
@@ -2146,4 +2146,44 @@ section {
         height: 46px;
         font-size: 1.4em;
     }
+}
+
+/* published-paper link inside an experience card */
+.research-paper {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(126, 196, 255, 0.2);
+}
+
+.research-paper-desc {
+    margin: 0 0 10px !important;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* badge jump targets: land below the fixed navbar and flash briefly */
+#exp-geovision,
+#research-paper,
+#proj-isaac-sim,
+#proj-htn,
+#proj-winhacks {
+    scroll-margin-top: 24px;
+}
+
+.jump-flash {
+    animation: jump-flash 1.6s ease-out;
+}
+
+@keyframes jump-flash {
+    0%, 30% { box-shadow: 0 0 0 2px #4da6ff, 0 0 28px rgba(77, 166, 255, 0.55); }
+    100% { box-shadow: 0 0 0 2px transparent, 0 0 0 transparent; }
+}
+
+html[data-theme="overdrive"] .jump-flash {
+    animation-name: jump-flash-od;
+}
+
+@keyframes jump-flash-od {
+    0%, 30% { box-shadow: 0 0 0 2px #ff7a1a, 0 0 28px rgba(255, 122, 26, 0.55); }
+    100% { box-shadow: 0 0 0 2px transparent, 0 0 0 transparent; }
 }

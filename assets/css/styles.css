@@ -2148,6 +2148,11 @@ section {
     }
 }
 
+/* GTA-only tagline: hidden only while the location check runs */
+html.geo-pending .geo-title {
+    visibility: hidden;
+}
+
 /* published-paper link inside an experience card */
 .research-paper {
     margin-top: 14px;

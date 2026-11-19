@@ -12,6 +12,7 @@
         try { if (localStorage.getItem('portfolio-theme') === 'overdrive') document.documentElement.setAttribute('data-theme', 'overdrive'); } catch (e) {}
     </script>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script>document.documentElement.classList.add('geo-pending');</script>
     <link rel="stylesheet" href="assets/css/overdrive.css">
     <link rel="icon" href="assets/images/favicon2.ico" type="image/x-icon">
     <script type="importmap">
@@ -83,7 +84,7 @@
         </header>
         <section id="intro" class="intro-section">
             <h2 class="terminal-greeting"><span class="terminal-prompt">&gt;</span><span class="terminal-typed">hello friends, welcome!</span></h2>
-            <h3>Machine Vision Specialist | Building Towards Robotics</h3>
+            <h3 class="geo-title" data-gta-title="Machine Vision Tech">Machine Vision Specialist | Building Towards Robotics</h3>
             <div class="bio-highlights">
                 <a class="bio-badge" href="#proj-winhacks">🏆 WinHacks 2024 Winner (3rd Place)</a>
                 <a class="bio-badge" href="#proj-htn">🎯 HackTheNorth 2025 Candidate</a>
@@ -852,6 +853,7 @@
     <script src="assets/js/stick-arena.js"></script>
     <script src="assets/js/sky-hopper.js"></script>
     <script type="module" src="assets/js/model.js"></script>
+    <script src="assets/js/geo-title.js?v=2"></script>
     <script src="assets/js/binary-field.js?v=1"></script>
     <script src="assets/js/badge-links.js?v=1"></script>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2f9db2d2735f4aea80cba66786c808f4"}'></script><!-- End Cloudflare Web Analytics -->
